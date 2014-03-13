@@ -26,7 +26,8 @@ Template Name: Municipal Helpline
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_sidebar(); ?>
+					<?php get_template_part( 'news-events-muni' ); ?>
+
 				</div>
 
 				<div class="municipal">

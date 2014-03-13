@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Generic Content
+Template Name: Events
 */
 ?>
 
 <?php get_header(); ?>
 
-			<div class="main">
+			<div class="main" id="main">
 
 				<div class="main-banner">
 
@@ -22,28 +22,29 @@ Template Name: Generic Content
 							<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/pdf.png" alt="" width="" height="" /></a>
 					</div>
 
-				</div><!--end of main banner-->
+				</div><!--end of main banner-->	
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_template_part( 'news-events' ); ?>
+					<?php get_sidebar(); ?>
 				</div>
 
-				<div class="main-content">
-				<?php if( have_rows('new_paragraph') ):
-				 
-				    while ( have_rows('new_paragraph') ) : the_row(); ?>
+			<div class="nee-wrap">
+				<div class="nee-list">
+					<h1>News</h1>
+					<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '6') );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<div class="nee-item">
+						<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>
 
-				        <h1><?php the_sub_field('new_title'); ?></h1>
-				        <p><?php the_sub_field('new_content'); ?></p>
+						<p><?php the_excerpt(); ?></p>
+						<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
+					</div>
 
-				 <?php endwhile;
-				 
-				else :
-
-				endif; ?>
-
+					<?php endwhile; wp_reset_postdata(); ?>
 				</div>
-			</div><!--end of main-->
+				
+				<a id="top" href="#main">Back to top</a>
+			</div><!--end of News-->
 
 <?php get_footer(); ?>

@@ -1395,25 +1395,70 @@ you can add resource intensive styles.
   *********************/
   .sidebar {
     width: 231px;
-    margin: 0; }
+    margin: 0;
+    line-height: 14px; }
+    .sidebar h3 {
+      font-family: Georgia, serif;
+      color: #A4713B;
+      font-size: 12px;
+      margin: 0; }
     .sidebar h4 {
       font-family: tahoma, sans-serif;
       color: #386787;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: normal;
       text-transform: uppercase;
       margin: 10px 0 20px;
       padding: 0 0 7px;
       border-bottom: 7px solid #E7E0D8; }
     .sidebar a {
-      color: #A4713B;
-      text-transform: capitalize;
-      font-family: Georgia, sans-serif;
-      font-size: 12px;
       text-decoration: none; }
-    .sidebar a:hover {
-      color: #A4713B;
+    .sidebar .full {
+      display: block;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      width: 20px;
+      padding: 2px;
+      color: #fff;
+      background: #A4713B;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 18px 0; }
+    .sidebar .full:first-of-type {
+      width: 96px; }
+    .sidebar .full:hover {
+      color: #fff;
       text-decoration: underline; }
+    .sidebar .full-link {
+      display: block;
+      color: #386787;
+      width: 100%;
+      padding: 10px 0;
+      border-top: 2px solid #E7E0D8; }
+    .sidebar .municipal-contact {
+      float: left;
+      width: 240px;
+      margin: 0 0 40px 0; }
+      .sidebar .municipal-contact h3 {
+        display: block;
+        color: #5E829A;
+        font-family: Tahoma, sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 30px 0 10px;
+        border-bottom: 7px solid #E7E0D8;
+        text-transform: uppercase; }
+      .sidebar .municipal-contact li {
+        background: url(../images/phone.png) top left no-repeat;
+        padding: 0 0 0 20px;
+        font-weight: 900; }
+      .sidebar .municipal-contact a {
+        color: #a4713b;
+        text-transform: capitalize;
+        text-decoration: none; }
+      .sidebar .municipal-contact a:hover {
+        color: #0b3768;
+        text-decoration: underline; }
 
   /*********************
   FOOTER STYLES
@@ -1975,7 +2020,7 @@ you can add resource intensive styles.
       border-bottom: none; }
 
   /*********************
-  E-BULLETIN STYLES
+  SUBSCRIBE E-BULLETIN STYLES
   *********************/
   .ebulletin {
     float: left;
@@ -2025,14 +2070,112 @@ you can add resource intensive styles.
   .news-events {
     float: left;
     width: 690px; }
+    .news-events a {
+      text-decoration: none; }
+    .news-events h3 {
+      color: #a4713b;
+      font-family: Georgia, serif;
+      margin: 0; }
+    .news-events h3:hover {
+      text-decoration: underline; }
+    .news-events .news-list h1, .news-events .events-list h1 {
+      font-family: Tahoma, sans-serif;
+      font-size: 17px;
+      color: #587C93;
+      border-bottom: 7px solid #D6CDC3;
+      padding: 0 0 8px 0; }
+    .news-events .full {
+      display: block;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      width: 20px;
+      padding: 2px;
+      margin: 0 0 20px 4px;
+      color: #fff;
+      background: #A4713B; }
+    .news-events .full:hover {
+      color: #bbb; }
+    .news-events .full-link {
+      display: block;
+      color: #386787;
+      padding: 20px 0 0 0; }
     .news-events .news-list {
       float: left;
       width: 280px;
       margin: 30px; }
+      .news-events .news-list .news-item {
+        border-bottom: 2px solid #D6CDC3; }
+        .news-events .news-list .news-item p {
+          width: 270px; }
     .news-events .events-list {
       float: left;
       width: 280px;
-      margin: 30px; } }
+      margin: 30px; }
+      .news-events .events-list .events-item {
+        border-bottom: 2px solid #D6CDC3; }
+        .news-events .events-list .events-item p {
+          width: 270px; }
+
+  .post-time {
+    display: block;
+    color: #981231;
+    margin: 8px 0; }
+
+  /*********************
+  SINGLE NEWS/EVENTS/EBULLETIN STYLES
+  *********************/
+  .single-wrap {
+    float: left;
+    width: 620px;
+    margin: 0 0 0 30px; }
+    .single-wrap h2 {
+      font-family: tahoma, sans-serif;
+      color: #386787;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase; }
+    .single-wrap a {
+      color: #A4713B;
+      text-decoration: none; }
+    .single-wrap a:hover {
+      text-decoration: underline; }
+
+  /*********************
+  PAGE NEWS/EVENTS/EBULLETIN STYLES
+  *********************/
+  .nee-wrap {
+    float: left;
+    width: 620px;
+    margin: 0 0 0 30px; }
+    .nee-wrap a {
+      text-decoration: none; }
+    .nee-wrap h2 {
+      font-family: tahoma, sans-serif;
+      color: #386787;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase; }
+    .nee-wrap .full {
+      display: block;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 92px;
+      padding: 1px;
+      color: #fff;
+      background: #A4713B; }
+    .nee-wrap .full:hover {
+      color: #fff;
+      text-decoration: underline; }
+    .nee-wrap #top {
+      display: block;
+      color: #a4713b;
+      font-weight: 900;
+      margin: 25px 0; }
+    .nee-wrap #top:hover {
+      color: #0b3768;
+      text-decoration: underline; } }
 /*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

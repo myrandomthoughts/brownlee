@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Generic Content
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div class="main">
@@ -26,24 +20,12 @@ Template Name: Generic Content
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_template_part( 'news-events' ); ?>
+					<?php get_sidebar(); ?>
 				</div>
 
-				<div class="main-content">
-				<?php if( have_rows('new_paragraph') ):
-				 
-				    while ( have_rows('new_paragraph') ) : the_row(); ?>
-
-				        <h1><?php the_sub_field('new_title'); ?></h1>
-				        <p><?php the_sub_field('new_content'); ?></p>
-
-				 <?php endwhile;
-				 
-				else :
-
-				endif; ?>
-
-				</div>
-			</div><!--end of main-->
+				<div class="single-wrap">
+					<h2><?php the_field( 'ne_title' ); ?></h2>
+					<span><?php the_field( 'ne_content' ); ?></span>
+			</div><!--end of single-->
 
 <?php get_footer(); ?>

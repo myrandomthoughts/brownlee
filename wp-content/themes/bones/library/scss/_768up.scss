@@ -275,11 +275,19 @@ SIDEBARS & ASIDES
 .sidebar {
 	width: 231px;
 	margin: 0;
+	line-height: 14px;
+
+	h3 {
+		font-family: Georgia, serif;
+		color: #A4713B;
+		font-size: 12px;
+		margin: 0;
+	}
 
 	h4 {
 		font-family: tahoma, sans-serif;
 		color: #386787;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: normal;
 		text-transform: uppercase;
 		margin: 10px 0 20px;
@@ -288,16 +296,71 @@ SIDEBARS & ASIDES
 	}
 
 	a {
-		color: #A4713B;
-		text-transform: capitalize;
-		font-family: Georgia, sans-serif;
-		font-size: 12px;
 		text-decoration: none;
 	}
 
-	a:hover {
-		color: #A4713B;
+	.full {
+		display: block;
+		font-family: Arial, sans-serif;
+		text-align: center;
+		width: 20px;
+		padding: 2px;
+		color: #fff;
+		background: #A4713B;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 18px 0;
+	}
+
+	.full:first-of-type{
+		width: 96px;
+	}
+
+	.full:hover {
+		color: #fff;
 		text-decoration: underline;
+	}
+
+	.full-link {
+		display: block;
+		color: #386787;
+		width: 100%;
+		padding: 10px 0;
+		border-top: 2px solid #E7E0D8;
+	}
+
+	.municipal-contact {
+		float: left;
+		width: 240px;
+		margin: 0 0 40px 0;
+
+		h3 {
+			display: block;
+			color: #5E829A;
+			font-family: Tahoma, sans-serif;
+			font-size: 15px;
+			font-weight: normal;
+			padding: 30px 0 10px;
+			border-bottom: 7px solid #E7E0D8;
+			text-transform: uppercase;
+		}
+
+		li {
+			background: url(../images/phone.png) top left no-repeat;
+			padding: 0 0 0 20px;
+			font-weight: 900;
+		}
+
+		a {
+			color: #a4713b;
+			text-transform: capitalize;
+			text-decoration: none;
+		}
+
+		a:hover {
+				color: #0b3768;
+				text-decoration: underline;
+		}
 	}
 }
 
@@ -1104,7 +1167,7 @@ CONTACT STYLES
 }
 
 /*********************
-E-BULLETIN STYLES
+SUBSCRIBE E-BULLETIN STYLES
 *********************/
 
 .ebulletin {
@@ -1179,15 +1242,158 @@ NEWS AND EVENTS STYLES
 	float: left;
 	width: 690px;
 
+	a {
+		text-decoration: none;
+	}
+
+	h3 {
+		color: #a4713b;
+		font-family: Georgia, serif;
+		margin: 0;
+	}
+
+	h3:hover {
+		text-decoration: underline;
+	}
+
+	.news-list h1, .events-list h1 {
+		font-family: Tahoma, sans-serif;
+		font-size: 17px;
+		color: #587C93;
+		border-bottom: 7px solid #D6CDC3;
+		padding: 0 0 8px 0;
+	}
+
+	.full {
+		display: block;
+		font-family: Arial, sans-serif;
+		text-align: center;
+		width: 20px;
+		padding: 2px;
+		margin: 0 0 20px 4px;
+		color: #fff;
+		background: #A4713B;
+	}
+
+	.full:hover {
+		color: #bbb;
+	}
+
+	.full-link {
+		display: block;
+		color: #386787;
+		padding: 20px 0 0 0;
+	}
+
 	.news-list {
 		float: left;
 		width: 280px;
 		margin: 30px;
+
+		.news-item {
+			border-bottom: 2px solid #D6CDC3;
+
+			p {
+				width: 270px;
+			}
+		}	
 	}
 
 	.events-list {
 		float: left;
 		width: 280px;
 		margin: 30px;
+
+		.events-item {
+			border-bottom: 2px solid #D6CDC3;
+
+			p {
+				width: 270px;
+			}
+		}
+	}
+}
+
+.post-time {
+	display: block;
+	color: #981231;
+	margin: 8px 0;
+}
+
+/*********************
+SINGLE NEWS/EVENTS/EBULLETIN STYLES
+*********************/
+
+.single-wrap {
+	float: left;
+	width: 620px;
+	margin: 0 0 0 30px;
+
+	h2 {
+		font-family: tahoma, sans-serif;
+		color: #386787;
+		font-size: 18px;
+		font-weight: normal;
+		text-transform: uppercase;	
+	}
+
+	a {
+		color: #A4713B;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+/*********************
+PAGE NEWS/EVENTS/EBULLETIN STYLES
+*********************/
+
+.nee-wrap {
+	float: left;
+	width: 620px;
+	margin: 0 0 0 30px;
+
+	a {
+		text-decoration: none;
+	}
+
+	h2 {
+		font-family: tahoma, sans-serif;
+		color: #386787;
+		font-size: 18px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	.full {
+		display: block;
+		font-family: Arial, sans-serif;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 92px;
+		padding: 1px;
+		color: #fff;
+		background: #A4713B;
+	}
+
+	.full:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	#top {
+		display: block;
+		color: #a4713b;
+		font-weight: 900;
+		margin: 25px 0;
+	}
+
+	#top:hover {
+		color: #0b3768;
+		text-decoration: underline;
 	}
 }

@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Front Page
+*/
+?>
 <?php get_header(); ?>
 
 			<div class="main">
@@ -12,10 +17,8 @@
 					<?php bones_main_nav(); ?>
 
 						<div class="home-intro">
-								<h1>Providing Innovative Legal Solutions For Over 70 Years</h1>
-							<p>
-								At Brownlee LLP, our commitment to our clients is the same as it was when John Edward Brownlee founded our firm. The foundation Mr. Brownlee established to provide our clients with the highest quality of legal services resonates through every lawyer, in every practice area at our firm. Our ongoing commitment is a reflection of the original commitment made by Mr. Brownlee towards his profession, his clients and his community.
-							</p>
+								<h1><?php the_field( 'opening_heading' ); ?></h1>
+							<p><?php the_field( 'opening_paragraph' ); ?></p>
 						</div>
 
 					</div><!--end of home top-->
