@@ -19,10 +19,10 @@
 define('DB_NAME', 'brownlee');
 
 /** MySQL database username */
-define('DB_USER', 'bladmin');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'blpassword');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -50,6 +50,8 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
+// define('WP_HOME','http://localhost');
+// define('WP_SITEURL','http://localhost');
 
 /**#@-*/
 
@@ -88,3 +90,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
