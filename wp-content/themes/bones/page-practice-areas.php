@@ -26,7 +26,7 @@ Template Name: Practice Areas
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_sidebar(); ?>
+					<?php get_template_part('bulletin'); ?>
 				</div>
 
 				<div class="main-content practice-areas">

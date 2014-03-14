@@ -71,35 +71,54 @@ Template Name: Front Page
 
 					<div class="sidebar-entry">
 						<h3>News</h3>
-						<span>February 26, 2014</span><br>
-						<a class="entry-title" href="">Brownlee LLP New Q.C. Appointments</a>
-						<p>
-							Congratulations to Thomas D. Marriott, Managing Partner and Allen R. Evaniew, Partner of the Edmonton office on their 2013 Queen’s Counsel (Q.C.) appointments.
-						</p>
-						<a class="full" href="">></a><br>
-						<a class="view" href="">View News</a>
+						<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1') );
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<span class="post-time"><?php the_time('F j, Y'); ?></span>
+						<div class="news-item">
+							<a href="<?php the_permalink(); ?>"><?php the_field( 'ne_title' ); ?></a>
+
+							<p><?php the_excerpt(); ?></p>
+							<a class="full-front" href="<?php the_permalink(); ?>">></a>
+						</div>
+
+						<?php endwhile; wp_reset_postdata(); ?>
+						<a class="view" href="<?php bloginfo('url'); ?>/?page_id=91">View News</a>
 					</div><!--end of sidebar entry-->
 
-					<div class="sidebar-entry">
-						<h3>News</h3>
-						<span>February 26, 2014</span><br>
-						<a class="entry-title" href="">Brownlee LLP New Q.C. Appointments</a>
-						<p>
-							Congratulations to Thomas D. Marriott, Managing Partner and Allen R. Evaniew, Partner of the Edmonton office on their 2013 Queen’s Counsel (Q.C.) appointments.
-						</p>
-						<a class="full" href="">></a><br>
-						<a class="view" href="">View News</a>
-					</div><!--end of sidebar entry-->
 
 					<div class="sidebar-entry">
-						<h3>News</h3>
-						<span>February 26, 2014</span><br>
-						<a class="entry-title" href="">Brownlee LLP New Q.C. Appointments</a>
-						<p>
-							Congratulations to Thomas D. Marriott, Managing Partner and Allen R. Evaniew, Partner of the Edmonton office on their 2013 Queen’s Counsel (Q.C.) appointments.
-						</p>
-						<a class="full" href="">></a><br>
-						<a class="view" href="">View News</a>
+						<h3>Events</h3>
+						<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1') );
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<span class="post-time"><?php the_time('F j, Y'); ?></span>
+						<div class="news-item">	
+							<a href="<?php the_permalink(); ?>"><?php the_field( 'ne_title' ); ?></a>
+
+							<p><?php the_excerpt(); ?></p>
+							<a class="full-front" href="<?php the_permalink(); ?>">></a>
+						</div>
+
+						<?php endwhile; wp_reset_postdata(); ?>
+						<a class="view" href="<?php bloginfo('url'); ?>/?page_id=193">View Events</a>
+					</div><!--end of sidebar entry-->
+
+
+					<div class="sidebar-entry">
+						<h3>E-Bulletins</h3>
+						<?php $loop = new WP_Query( array( 'post_type' => 'e-bulletin', 'posts_per_page' => '1') );
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<span class="post-time"><?php the_time('F j, Y'); ?></span>
+						<div class="news-item">	
+							<div class="text-wrap">
+								<a href="<?php the_permalink(); ?>"><?php the_field( 'ne_title' ); ?></a>
+
+								<p><?php the_excerpt(); ?></p>
+								<a class="full-front" href="<?php the_permalink(); ?>">></a>
+							</div>
+						</div>
+
+						<?php endwhile; wp_reset_postdata(); ?>
+						<a class="view" href="<?php bloginfo('url'); ?>/?page_id=193">View Events</a>
 					</div><!--end of sidebar entry-->
 				</div><!--end of homepage-->
 

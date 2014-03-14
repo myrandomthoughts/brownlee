@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Lawyers
+Template Name: Careers
 */
 ?>
 
@@ -22,29 +22,30 @@ Template Name: Lawyers
 							<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/pdf.png" alt="" width="" height="" /></a>
 					</div>
 
-				</div><!--end of main banner-->	
+				</div><!--end of main banner-->
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_template_part( 'bulletin-news-events-muni' ); ?>
-
+					<?php get_template_part( 'news-events' ); ?>
 				</div>
 
-			<div class="all-lawyers">
+				<div class="main-content careers">
+					<?php the_field('top_paragraph'); ?>
 
-				<?php $loop = new WP_Query( array( 'post_type' => 'biography',
-												   'order'     => 'title') );
-				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php if( have_rows('new_paragraph') ):
+				 
+				    while ( have_rows('new_paragraph') ) : the_row(); ?>
 
-				<div class="single-lawyer">
-					<?php the_post_thumbnail( 'thumbnail' ); ?>
+				        <h1><?php the_sub_field('new_title'); ?></h1>
+				        <p><?php the_sub_field('new_content'); ?></p>
+				        <a class="full" href="">View</a>
+				 <?php endwhile;
+				 
+				else :
 
-					<div class="lawyer-name">
-						<?php the_title( '<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a>' ); ?>
-					</div>
+				endif; ?>
+
 				</div>
-				<?php endwhile; wp_reset_postdata(); ?>
-
-			</div><!--end of all lawyers-->
+			</div><!--end of main-->
 
 <?php get_footer(); ?>

@@ -26,12 +26,11 @@ Template Name: News
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_sidebar(); ?>
+					<?php get_template_part('bulletin'); ?>
 				</div>
 
 			<div class="nee-wrap">
 				<div class="nee-list">
-					<h1>News</h1>
 					<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '6') );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div class="nee-item">

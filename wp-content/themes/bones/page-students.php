@@ -26,7 +26,7 @@ Template Name: Students
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_sidebar(); ?>
+					<?php get_template_part('bulletin-news-events-muni'); ?>
 				</div>
 
 

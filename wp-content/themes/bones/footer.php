@@ -47,64 +47,64 @@
 
 					<div class="sm-left">
 						<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/linkedin-s.png" alt="" width="" height="" /></a>
-						<p>Site Design : <a href="">Skunkworks Creative Group</a></p>
+						<p>Site Design : <a href="http://www.skunkworks.ca/">Skunkworks Creative Group</a></p>
 					</div>
 
 					<div class="sm-right">
 						<ul class="sm-top-nav">
 							<li>Copyright &copy; 2014 Brownlee LLP</li>
-							<li><a>Home</a></li>
-							<li><a>Contact</a></li>
-							<li><a>Login</a></li>
-							<li><a>Payment</a></li>
-							<li><a>Privacy Policy</a></li>
-							<li><a>Terms Of Use</a></li>
-							<li><a>Site Map</a></li>
+							<li><a href="home_url();">Home</a></li>
+							<li><a href="<?php bloginfo('url'); ?>/?page_id=193">Contact</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=119">Login</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=200">Payment</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=203">Privacy Policy</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=207">Terms Of Use</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=">Site Map</a></li>
 						</ul>
 
 						<div class="sm-column">
 							<h4>About Us</h4>
 							<ul>
-								<li><a>Firm Profile</a></li>
-								<li><a>Community Involvement</a></li>
-								<li><a>History</a></li>
-								<li><a>Practice Areas</a></li>
-								<li><a>Municipal Helpline</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=11">Firm Profile</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=25">Community Involvement</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=29">History</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=81">Practice Areas</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=31">Municipal Helpline</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>People</h4>
 							<ul>
-								<li><a>Lawyers</a></li>
-								<li><a>Students</a></li>
-								<li><a>Administration</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=48">Lawyers</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=111">Students</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=46">Administration</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>News &amp; Events</h4>
 							<ul>
-								<li><a>News</a></li>
-								<li><a>Events &amp; Seminars</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=91">News</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=193">Events &amp; Seminars</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>Resources</h4>
 							<ul>
-								<li><a>E-Bulletin</a></li>
-								<li><a>Articles &amp; Publications</a></li>
-								<li><a>Links</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=117">E-Bulletin</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=214">Articles &amp; Publications</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=217">Links</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>Careers</h4>
 							<ul>
-								<li><a>Students</a></li>
-								<li><a>Lawyers</a></li>
-								<li><a>Staff</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=235">Students</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=276">Lawyers</a></li>
+								<li><a href="<?php bloginfo('url'); ?>?page_id=279">Staff</a></li>
 							</ul>
 						</div>
 					</div>

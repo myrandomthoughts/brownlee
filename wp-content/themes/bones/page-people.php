@@ -26,52 +26,43 @@ Template Name: People
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_sidebar(); ?>
+					<?php get_template_part('bulletin'); ?>
 				</div>
 
+				<div class="main-content">
+					<?php if( have_rows('new_paragraph') ):
+					 
+					    while ( have_rows('new_paragraph') ) : the_row(); ?>
+
+					        <h1><?php the_sub_field('new_title'); ?></h1>
+					        <p><?php the_sub_field('new_content'); ?></p>
+					        <a class="link" href="">View</a>
+
+					 <?php endwhile;
+					 
+					else :
+
+					endif; ?>
+				</div>
+
+
 				<div class="people">
-					<h1><?php the_field('title'); ?></h1>
-					<p><?php the_field('generic_content'); ?></p>
-					<a class="link" href="">View</a>
+					<h1>Administration</h1>
+					<?php if( have_rows('administration') ):
+					 
+					    while ( have_rows('administration') ) : the_row(); ?>
 
-					<div class="admin">
-						<h3>Jennifer Bell, CHRP</h3>
+					    <div class="admin">
+					        <h3><?php the_sub_field('admin_name'); ?></h3>
+					        <em><?php the_sub_field('admin_position'); ?></em>
+					        <address><span><?php the_sub_field('admin_address'); ?></span></address>
+					        <a href="mailto:"><?php the_sub_field('admin_email'); ?></a>
+					    </div>
+					 <?php endwhile;
+					 
+					else :
 
-						<address>
-							<em>HR Administrator, Edmonton</em>
-							<span>2200 Commerce Place</span>
-							<span>10155 - 102 Street</span>
-							<span>Edmonton, AB T5J 4G8</span>
-						</address>
-
-						<a href="mailto:">jbell@brownleelaw.com</a>
-					</div>
-
-					<div class="admin">
-						<h3>Jennifer Bell, CHRP</h3>
-
-						<address>
-							<em>HR Administrator, Edmonton</em>
-							<span>2200 Commerce Place</span>
-							<span>10155 - 102 Street</span>
-							<span>Edmonton, AB T5J 4G8</span>
-						</address>
-
-						<a href="mailto:">jbell@brownleelaw.com</a>
-					</div>
-
-					<div class="admin">
-						<h3>Jennifer Bell, CHRP</h3>
-
-						<address>
-							<em>HR Administrator, Edmonton</em>
-							<span>2200 Commerce Place</span>
-							<span>10155 - 102 Street</span>
-							<span>Edmonton, AB T5J 4G8</span>
-						</address>
-
-						<a href="mailto:">jbell@brownleelaw.com</a>
-					</div>
+					endif; ?>
 
 				</div><!--end of people-->
 

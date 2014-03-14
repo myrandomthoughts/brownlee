@@ -34,8 +34,8 @@
 	<div class="municipal-contact">
 		<h3>Contact our Municipal Helpine:</h3>
 		<ul>
-			<li>1-800-661-9069 (Edmonton)</li>
-			<li>1-877-232-8303 (Calgary)</li>
+			<li><?php the_field('muni_edmonton_ph') ?> (Edmonton)</li>
+			<li><?php the_field('muni_calgary_ph') ?> (Calgary)</li>
 		</ul>
 		<em>or directly by e-mail to a member of our <a href="">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
 	</div>
