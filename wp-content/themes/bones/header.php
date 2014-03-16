@@ -47,8 +47,11 @@
 				<div class="wrap">
 
 					<section id="top-section">
-
-						<?php get_search_form(); ?>
+						<div class="search">
+							<span>Search</span>
+							<?php get_search_form(); ?>
+						</div>
+						
 						<?php top_menu(); ?>
 						
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>

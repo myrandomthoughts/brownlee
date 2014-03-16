@@ -92,32 +92,66 @@ HEADER STYLES
 	.current-menu-item {
 		color: #a4713b
 	}
-
-	form {
+	.search {
+		position: relative;
 		float: right;
-		padding: 15px 0 0 10px;
-		width: 200px;
+		padding: 16px 0 0 0;
 
-		.screen-reader-text {
-			display: none;
-		}
-
-		#s {
-			padding: 2px 6px;
-			background: #6B6B6B;
-			border: none;
-			color: #aaa;
-		}
-
-		#searchsubmit {
+		span {
 			font-family: Arial, sans-serif;
 			font-size: 12px;
-			border: none;
-			text-align: center;
 			text-transform: uppercase;
-			padding: 2px 4px;
+			padding: 0 10px;
 			color: #bebdbd;
-			background: #4D4A4A;
+		}
+
+		span:hover {
+			cursor: pointer;
+		}
+
+		#searchform {
+			display: none;
+			position: absolute;
+			top:34px;
+			right: 10px;
+			width: 220px;
+			height: 53px;
+			background: url(../images/search-bg.png) top left no-repeat;
+
+			.screen-reader-text {
+				display: none;
+			}
+
+			#s {
+				font-family: Arial, sans-serif;
+				padding: 4px 72px 4px 2px;
+				border: none;
+				color: #aaa;
+				display: block;
+				margin: 20px 0 0 10px;
+			}	
+
+			#searchsubmit {
+				display: block;
+				z-index: 10;
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+				border: none;
+				text-align: center;
+				text-transform: uppercase;
+				padding: 2px 4px;
+				color: #fff;
+				background: #a4713b;
+				margin: -21px 0 0 151px;
+			}
+
+			#searchsubmit:hover {
+				color: #bebdbd;
+			}
+		}
+
+		span:hover + #searchform {
+			display: block;
 		}
 	}
 }
@@ -249,7 +283,7 @@ NAVIGATION STYLES
 				left: 20px;
 
 				li a::before {
-					content: ">";
+					content: "-";
 					color: #a4713b;
 					padding: 0 4px 0 0;
 					font-size: 14px;
@@ -268,6 +302,8 @@ NAVIGATION STYLES
 		color: #A4713B;
 	}
 }
+
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -778,6 +814,14 @@ GENERIC CONTENT STYLES
 	margin: 36px 0 12px;
 	}
 
+	h2 {
+	font-family: Tahoma, sans-serif;
+	color: #386787;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 36px 0 12px;
+	}
+
 	li {
 		background: url(../images/bullet.png) left 3px no-repeat;
 		padding: 0 0 0 18px;
@@ -793,6 +837,23 @@ GENERIC CONTENT STYLES
 	}
 
 	.jtitle:hover {
+		text-decoration: underline;
+	}
+
+	.full {
+		display: inline-block;
+		font-family: Tahoma, sans-serif;
+		font-size: 12px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 0 6px;
+		color: #fff;
+		background: #A4713B;
+	}
+
+	.full:hover {
+		color: #fff;
 		text-decoration: underline;
 	}
 }
@@ -840,7 +901,7 @@ PEOPLE STYLES
 	.admin {
 		float: left;
 		width: 240px;
-		margin: 0 0 38px 0;
+		margin: 0 0 20px 0;
 
 		h3 {
 			color: #135cae;

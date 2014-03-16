@@ -41,9 +41,10 @@ Template Name: Careers--Students
 				
 					<li><?php the_title('<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a>'); ?></li>
 				
-
 				<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
+
+				<h2><?php the_field('text_entry'); ?></h2>
 				<?php $loop = new WP_Query( array( 'post_type' => 'student_positions',
 												   'order'     => 'asc') );
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -52,7 +53,9 @@ Template Name: Careers--Students
 					<h1><?php the_title('<a class="jtitle" href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a>'); ?></h1>
 					
 					<?php the_excerpt(); ?>
-					
+
+					<?php $link = get_permalink(); ?>
+					<a class="full" href="<?php echo $link ?>">Read More...</a>
 				<?php endwhile; wp_reset_postdata(); ?>
 			</div><!--end of main content-->
 

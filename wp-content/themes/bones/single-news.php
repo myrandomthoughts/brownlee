@@ -23,9 +23,11 @@
 					<?php get_template_part('bulletin-news-events-muni'); ?>
 				</div>
 
-				<div class="single-wrap">
+				<div class="single-wrap main-content">
 					<h2><?php the_field( 'ne_title' ); ?></h2>
 					<span><?php the_field( 'ne_content' ); ?></span>
+					<?php the_post_thumbnail(array(600,1000)); ?>
+				</div>
 			</div><!--end of single-->
 
 <?php get_footer(); ?>

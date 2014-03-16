@@ -433,26 +433,51 @@ HEADER STYLES
     margin: 0 auto; }
   .header .current-menu-item {
     color: #a4713b; }
-  .header form {
+  .header .search {
+    position: relative;
     float: right;
-    padding: 15px 0 0 10px;
-    width: 200px; }
-    .header form .screen-reader-text {
-      display: none; }
-    .header form #s {
-      padding: 2px 6px;
-      background: #6B6B6B;
-      border: none;
-      color: #aaa; }
-    .header form #searchsubmit {
+    padding: 16px 0 0 0; }
+    .header .search span {
       font-family: Arial, sans-serif;
       font-size: 12px;
-      border: none;
-      text-align: center;
       text-transform: uppercase;
-      padding: 2px 4px;
-      color: #bebdbd;
-      background: #4D4A4A; }
+      padding: 0 10px;
+      color: #bebdbd; }
+    .header .search span:hover {
+      cursor: pointer; }
+    .header .search #searchform {
+      display: none;
+      position: absolute;
+      top: 34px;
+      right: 10px;
+      width: 220px;
+      height: 53px;
+      background: url(../images/search-bg.png) top left no-repeat; }
+      .header .search #searchform .screen-reader-text {
+        display: none; }
+      .header .search #searchform #s {
+        font-family: Arial, sans-serif;
+        padding: 4px 72px 4px 2px;
+        border: none;
+        color: #aaa;
+        display: block;
+        margin: 20px 0 0 10px; }
+      .header .search #searchform #searchsubmit {
+        display: block;
+        z-index: 10;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 2px 4px;
+        color: #fff;
+        background: #a4713b;
+        margin: -21px 0 0 151px; }
+      .header .search #searchform #searchsubmit:hover {
+        color: #bebdbd; }
+    .header .search span:hover + #searchform {
+      display: block; }
 
 .main-banner {
   position: relative;
@@ -550,7 +575,7 @@ NAVIGATION STYLES
     padding: 0;
     left: 20px; }
     .nav li:hover .sub-menu ul li a::before {
-      content: ">";
+      content: "-";
       color: #a4713b;
       padding: 0 4px 0 0;
       font-size: 14px; }
@@ -937,6 +962,12 @@ GENERIC CONTENT STYLES
     font-weight: normal;
     text-transform: uppercase;
     margin: 36px 0 12px; }
+  .main-content h2 {
+    font-family: Tahoma, sans-serif;
+    color: #386787;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 36px 0 12px; }
   .main-content li {
     background: url(../images/bullet.png) left 3px no-repeat;
     padding: 0 0 0 18px; }
@@ -948,6 +979,19 @@ GENERIC CONTENT STYLES
     text-transform: uppercase;
     margin: 36px 0 12px; }
   .main-content .jtitle:hover {
+    text-decoration: underline; }
+  .main-content .full {
+    display: inline-block;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 6px;
+    color: #fff;
+    background: #A4713B; }
+  .main-content .full:hover {
+    color: #fff;
     text-decoration: underline; }
 
 .side-panel {
@@ -984,7 +1028,7 @@ PEOPLE STYLES
   .people .admin {
     float: left;
     width: 240px;
-    margin: 0 0 38px 0; }
+    margin: 0 0 20px 0; }
     .people .admin h3 {
       color: #135cae;
       font-family: Tahoma, sans-serif;

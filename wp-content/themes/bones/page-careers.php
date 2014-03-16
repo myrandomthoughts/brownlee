@@ -29,7 +29,7 @@ Template Name: Careers
 					<?php get_template_part( 'news-events' ); ?>
 				</div>
 
-				<div class="main-content careers">
+				<div class="main-content careers" id="top">
 					<?php the_field('top_paragraph'); ?>
 
 				<?php if( have_rows('new_paragraph') ):
@@ -38,7 +38,8 @@ Template Name: Careers
 
 				        <h1><?php the_sub_field('new_title'); ?></h1>
 				        <p><?php the_sub_field('new_content'); ?></p>
-				        <a class="full" href="">View</a>
+	        
+				        <a class="full" href="<?php  ?>">View</a>
 				 <?php endwhile;
 				 
 				else :

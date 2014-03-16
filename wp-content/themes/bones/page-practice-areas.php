@@ -43,10 +43,10 @@ Template Name: Practice Areas
 				</div>
 
 
-<!-- <?php
+<?php
 		$args = array(
 			'post_type' => 'biography',
-			'taxonomy' => 'Education'
+			'taxonomy' => 'practice_areas'
 		);
 
 
@@ -60,8 +60,7 @@ Template Name: Practice Areas
 				<?php
 			}
 		}
-?> -->
-
+?>
 			</div><!--end of main-->
 
 <?php get_footer(); ?>

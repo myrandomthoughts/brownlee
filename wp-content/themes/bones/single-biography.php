@@ -17,7 +17,21 @@
 	</div><!--end of main banner-->
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
-		<?php get_sidebar(); ?>
+		<h2>Practice Areas</h2>
+
+		<?php the_field('practice_areas'); ?>
+		<?php 
+ 
+		$term = get_field('practice_areas');
+		 
+		if( $term ): ?>
+		 
+			<h2><?php echo $term ?></h2>
+			<p><?php echo $term->name; ?></p>
+		 
+		<?php endif; ?>
+
+
 	</div>
 	<div class="profile-wrap">
 		<div class="profile">
@@ -48,6 +62,10 @@
 				<a href=""><li>Bio</li></a>
 				<a href=""><li>Representative Work</li></a>
 				<a href=""><li>Memberships</li></a>
+				<a href=""><li>Presentations</li></a>
+				<a href=""><li>Publications</li></a>
+				<a href=""><li>Recognition</li></a>
+				<a href=""><li>Community</li></a>
 			</ul>
 		</div>
 		<div class="profile-info">
