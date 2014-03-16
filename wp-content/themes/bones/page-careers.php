@@ -39,7 +39,7 @@ Template Name: Careers
 				        <h1><?php the_sub_field('new_title'); ?></h1>
 				        <p><?php the_sub_field('new_content'); ?></p>
 	        
-				        <a class="full" href="<?php  ?>">View</a>
+				        <a class="full" href="<?php the_permalink(); ?>">View</a>
 				 <?php endwhile;
 				 
 				else :

@@ -29,21 +29,24 @@ Template Name: News
 					<?php get_template_part('bulletin'); ?>
 				</div>
 
-			<div class="nee-wrap">
-				<div class="nee-list">
-					<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '6') );
-					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<div class="nee-item">
-						<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>
+				<?php the_field('text_entry'); ?>
 
-						<p><?php the_excerpt(); ?></p>
-						<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
+				<div class="nee-wrap">
+
+					<div class="nee-list">
+						<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '6') );
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<div class="nee-item">
+							<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>
+
+							<p><?php the_excerpt(); ?></p>
+							<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
+						</div>
+
+						<?php endwhile; wp_reset_postdata(); ?>
 					</div>
-
-					<?php endwhile; wp_reset_postdata(); ?>
-				</div>
-				
-				<a id="top" href="#main">Back to top</a>
-			</div><!--end of News-->
+					
+					<a id="top" href="#main">Back to top</a>
+				</div><!--end of News-->
 
 <?php get_footer(); ?>

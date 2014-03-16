@@ -44,6 +44,8 @@ Template Name: Careers--Students
 				<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
 
+				<?php the_field('handbook'); ?>
+
 				<h2><?php the_field('text_entry'); ?></h2>
 				<?php $loop = new WP_Query( array( 'post_type' => 'student_positions',
 												   'order'     => 'asc') );
