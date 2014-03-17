@@ -377,16 +377,6 @@ do they need tweaking?
  */
 /** RESET AND LAYOUT
 ===================================*/
-.bx-wrapper {
-  position: relative;
-  margin: 0 auto 60px;
-  padding: 0;
-  *zoom: 1; }
-
-.bx-wrapper img {
-  max-width: 100%;
-  display: block; }
-
 /** THEME
 ===================================*/
 /******************************************************************
@@ -405,7 +395,7 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
-.search, #menu-top-menu {
+.search, #menu-top-menu, .lawyer-search, .sidebar-entry, #menu-sitemap, .site-map {
   display: block; }
 
 header, .bx-pager, #menu-sitemap {
@@ -452,7 +442,10 @@ HEADER STYLES
     padding: 15px 10px;
     color: #bebdbd;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+    -transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .header #top-section ul li a:hover {
     color: #a4713b; }
   .header #active {
@@ -461,7 +454,8 @@ HEADER STYLES
     width: 347px;
     height: 94px;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 20px 0 0 0; }
   .header .current-menu-item {
     color: #a4713b; }
   .header .search {
@@ -477,13 +471,17 @@ HEADER STYLES
     .header .search span:hover {
       cursor: pointer; }
     .header .search #searchform {
-      display: none;
       position: absolute;
-      top: 36px;
+      top: 40px;
       right: 10px;
       width: 220px;
       height: 53px;
-      background: url(../images/search-bg.png) top left no-repeat; }
+      background: url(../images/search-bg.png) top left no-repeat;
+      overflow: hidden;
+      -webkit-transition: all 0.2s ease-in-out;
+      -transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      opacity: 0; }
       .header .search #searchform .screen-reader-text {
         display: none; }
       .header .search #searchform #s {
@@ -501,15 +499,25 @@ HEADER STYLES
         border: none;
         text-align: center;
         text-transform: uppercase;
-        padding: 2px 4px;
+        padding: 3px 7px;
         color: #fff;
         background: #a4713b;
-        margin: -21px 0 0 151px; }
+        margin: -21px 0 0 189px; }
       .header .search #searchform #searchsubmit:hover {
         color: #bebdbd; }
 
+header .search span {
+  -webkit-transition: all 0.2s ease-in-out;
+  -transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+header .search:hover span {
+  color: #a4713b; }
+
 header .search:hover #searchform {
-  display: block; }
+  top: 30px;
+  opacity: 1;
+  overflow: visible; }
 
 .main-banner {
   position: relative;
@@ -518,7 +526,10 @@ header .search:hover #searchform {
     position: absolute;
     top: 0;
     left: 10px;
-    background: none; }
+    background: none;
+    display: block;
+    width: 958px;
+    z-index: 1; }
   .main-banner .top-image-shadow {
     position: absolute;
     top: 478px;
@@ -712,7 +723,7 @@ footer {
     font-size: 18px;
     font-weight: normal;
     text-transform: uppercase;
-    width: 90%;
+    width: 100%;
     padding: 15px 0 6px;
     border-bottom: 2px solid #D8CFC4; }
   .lawyer-search p {
@@ -780,7 +791,7 @@ footer {
   .site-map .sm-right {
     float: left;
     height: 182px;
-    width: 675px;
+    width: 710px;
     background: url(../images/sitemap-right-bg.png) top left repeat-x; }
     .site-map .sm-right .sm-top-nav {
       margin: 12px 0 0 36px; }
@@ -874,7 +885,8 @@ HOME STYLES
 .sidebar-entry {
   float: left;
   width: 200px;
-  margin: 0 20px; }
+  margin: 0 20px;
+  padding: 0; }
   .sidebar-entry .text-wrap {
     height: 191px;
     overflow: hidden; }
@@ -931,7 +943,6 @@ HOME STYLES
   position: absolute;
   width: 255px;
   height: 250px;
-  background: url(../images/arrow.png) 0px no-repeat;
   background-color: #c7bbae;
   border: 10px solid #d8cfc4;
   padding: 18px;
@@ -954,9 +965,17 @@ HOME STYLES
     top: 72px;
     background: none; }
   .flyout .flyout-wrap {
-    width: 158px; }
+    width: 158px;
+    position: relative; }
     .flyout .flyout-wrap p span {
       text-align: left; }
+    .flyout .flyout-wrap .flyout-arrow {
+      height: 20px;
+      width: 20px;
+      background: url(../images/arrow.png) 0px no-repeat;
+      position: absolute;
+      top: 80px;
+      left: -34px; }
   .flyout a {
     color: #A4713B !important;
     text-decoration: none;

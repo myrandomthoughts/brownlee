@@ -16,7 +16,7 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
-.search, #menu-top-menu {display: block;}
+.search, #menu-top-menu, .lawyer-search, .sidebar-entry, #menu-sitemap, .site-map {display: block;}
 header, .bx-pager, #menu-sitemap {display: block;}
 body {
 	font-family: Georgia, serif;
@@ -25,7 +25,7 @@ body {
 	background: url(../images/bg-fade.png) left 312px repeat-x;
 	background-color: #f4eee7;
 }
-
+ 
 
 .main {
 	width: 960px;
@@ -73,6 +73,7 @@ HEADER STYLES
 		color: #bebdbd;
 		text-decoration: none;
 		text-transform: uppercase;
+		@include transition(all 0.2s ease-in-out);
 	}
 
 	#top-section ul li a:hover {
@@ -88,6 +89,7 @@ HEADER STYLES
 		height: 94px;
 		display: block;
 		margin: 0 auto;
+		padding:20px 0 0 0;
 	}
 
 	.current-menu-item {
@@ -111,16 +113,19 @@ HEADER STYLES
 		}
 
 		#searchform {
-			display: none;
+			
 			position: absolute;
-			top:36px;
+			top:40px;
 			right: 10px;
 			width: 220px;
 			height: 53px;
 			background: url(../images/search-bg.png) top left no-repeat;
-
+			overflow: hidden;
+			@include transition(all 0.2s ease-in-out);
+			opacity:0;
 			.screen-reader-text {
 				display: none;
+
 			}
 
 			#s {
@@ -140,10 +145,10 @@ HEADER STYLES
 				border: none;
 				text-align: center;
 				text-transform: uppercase;
-				padding: 2px 4px;
+				padding: 3px 7px;
 				color: #fff;
 				background: #a4713b;
-				margin: -21px 0 0 151px;
+				margin: -21px 0 0 189px;
 			}
 
 			#searchsubmit:hover {
@@ -155,7 +160,9 @@ HEADER STYLES
 	}
 }
 
-header .search:hover #searchform {display: block;}
+header .search span {@include transition(all 0.2s ease-in-out);}
+header .search:hover span{color: #a4713b;}
+header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 
 .main-banner {
 	position: relative;
@@ -167,6 +174,9 @@ header .search:hover #searchform {display: block;}
 		top: 0;
 		left: 10px;
 		background: none;
+		display: block;
+		width: 958px;
+		z-index:1;
 	}
 
 	.top-image-shadow {
@@ -428,7 +438,7 @@ footer {
 		font-size: 18px;
 		font-weight: normal;
 		text-transform: uppercase;	
-		width: 90%;
+		width: 100%;
 		padding: 15px 0 6px;
 		border-bottom: 2px solid #D8CFC4;
 	}
@@ -524,7 +534,7 @@ footer {
 	.sm-right {
 		float: left;
 		height: 182px;
-		width: 675px;
+		width: 710px;
 		background: url(../images/sitemap-right-bg.png) top left repeat-x;
 
 		.sm-top-nav {
@@ -656,6 +666,7 @@ HOME STYLES
 		float: left;
 		width: 200px;
 		margin: 0 20px;
+		padding:0;
 
 		.text-wrap {
 			height: 191px;
@@ -731,7 +742,6 @@ HOME STYLES
 	position: absolute;
 	width: 255px;
 	height: 250px;
-	background: url(../images/arrow.png) 0px no-repeat;
 	background-color: #c7bbae;
 	border: 10px solid #d8cfc4;
 	padding: 18px;
@@ -760,10 +770,12 @@ HOME STYLES
 
 	.flyout-wrap {
 		width: 158px;
+		position: relative;
 
 		p span {
 			text-align: left;
 		}
+	.flyout-arrow {height:20px; width:20px; background: url(../images/arrow.png) 0px no-repeat; position: absolute; top:80px; left:-34px;}
 	}
 
 	a {

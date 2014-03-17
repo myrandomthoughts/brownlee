@@ -14,9 +14,9 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-.search, #menu-top-menu, .top-image-shadow, .locations {display: none;}
-header {background: #000; padding:10px 0; margin:0 auto; text-align: center;}
-#top-image {background: #000;}
+.search, #menu-top-menu, .top-image-shadow, .lawyer-search, #menu-sitemap, .site-map {display: none;}
+header {background: #000; padding:10px 0; margin:0 auto; text-align: center; height:140px;}
+#top-image {background: #000; position: relative;}
 .bx-pager {display: none;}
 body {
 	font-family: $serif;
@@ -25,18 +25,19 @@ body {
 	color: #565656;
 }
 
-#menu-sitemap {display: none;}
+select {border-radius:0;}
 
+#menu-sitemap {display: none;}
+ 
 .home-top {position: relative;
+	
 
 	.top-nav {position: absolute; top: 220px; border: none; z-index:2;}
 
-	.home-intro {position: absolute; width: 100%;
+	.home-intro {position: relative; width: 100%;
 		background-color: #981231;
 		padding: 20px;
-		right:0;
-		top:-142px;
-		z-index:1;
+		z-index:1111;
 
 		h1 {
 			font-family: Tahoma, sans-serif;
@@ -56,8 +57,146 @@ body {
 	}
 }
 
-.homepage {margin: 80px 0 0 0; padding:40px;}
+#logo {
+	width: 300px;
+	height: 86px;
+	display: block;
+	margin: 0 auto;
+	padding:20px 0 0 0;
 
+	img {width: 300px;
+	height: 86px;}
+}
+
+.homepage {margin: 0px 0 0 0; padding:20px; clear: both; display: block;}
+
+.sidebar-entry {
+		width: 100%;
+		padding:20px;
+		display:none;
+
+		.text-wrap {
+			height: 191px;
+			overflow: hidden;
+		}
+
+		.news-item {
+			
+			position: relative;
+			overflow: hidden;
+
+			.full-front {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				width: 20px;
+				padding: 2px;
+				color: #fff;
+				background: #A4713B;
+				margin:0 0 4px 0;
+				
+				
+				display: block;
+			}
+		}
+
+		span {
+			display: block;
+			font-family: Georgia, serif;
+			color: #981231;
+			border-bottom: 2px solid #E7E0D8; 
+		}
+
+		h3 {
+			font-family: tahoma, sans-serif;
+			color: #386787;
+			font-size: 18px;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin: 0 0 3px 0;
+		}
+
+		a {
+			color: #A4713B;
+			text-transform: capitalize;
+			font-family: Georgia, sans-serif;
+			font-size: 12px;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #A4713B;
+			text-decoration: underline;
+		}
+
+		.full {
+			display: block;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			width: 20px;
+			padding: 2px;
+			color: #fff;
+			background: #A4713B;
+		}
+
+		.view {
+			display: block;
+			color: #386787;
+			border-top: 2px solid #E7E0D8;
+			padding: 4px 0 0 0;
+		}
+		p {font-size:12px;}
+	}
+
+
+
+.locations {
+		.office {
+		h3 {display: none;}
+}
+} /*end of office */
+
+.flyout-wrap {position: relative; margin:0 0 40px 0;
+	h2 {
+		color: #2D546E;
+		font-size: 13px;
+		font-weight: 900;
+		text-transform: uppercase;
+		background: none;
+		text-align: left;
+		border-bottom: 2px solid #b2a89e;
+		padding: 0 0 10px 0;
+		}
+
+	#map {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		background: none;
+	}
+
+	.flyout-wrap {
+		width: 158px;
+
+		p span {
+			text-align: left;
+		}
+	}
+
+	a {
+		color: #A4713B !important;
+		text-decoration: none;
+		padding: 4px 0;
+	}
+
+	a:hover {
+			text-decoration: underline;
+		}
+
+	a:last-of-type {
+		display: none;
+		background: url(../images/location-arrow.png) no-repeat left 4px;
+	}
+}
 
 
 /********************
@@ -825,9 +964,9 @@ FOOTER STYLES
 	.copyright {}
 
 
-
+	.bx-wrapper {position: relative;}
 	.bx-wrapper .bx-viewport {
-
+	position: relative;
 	left: -5px;
 
 }
@@ -837,7 +976,11 @@ FOOTER STYLES
 	position: absolute;
 	bottom: 122px;
 	width: 100%;
+	z-index:10000;
 }
+
+.bx-wrapper {width: 100%;}
+.bx-wrapper img {width:100%;}
 
 /* LOADER */
 

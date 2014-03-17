@@ -42,7 +42,9 @@ Template Name: Front Page
 				<h3>Edmonton</h3>
 		
 					 <div class="flyout flyout-left">
+
 					 	<div class="flyout-wrap">
+					 		<div class="flyout-arrow"></div>
 						<h2>Edmonton</h2>
 						<a id="map" href="">Map</a>
 						<p>
@@ -63,6 +65,7 @@ Template Name: Front Page
 
 			<div class="flyout flyout-right">
 					 <div class="flyout-wrap">
+					 	<div class="flyout-arrow"></div>
 					<h2>Calgary</h2>
 					<a id="map" href="">Map</a>
 					<p>
