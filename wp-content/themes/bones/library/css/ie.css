@@ -364,6 +364,31 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1; }
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block; }
+
+/** THEME
+===================================*/
 /******************************************************************
 Site Name: Brownlee LLP
 Author: OH Collective
@@ -380,6 +405,12 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
+.search, #menu-top-menu {
+  display: block; }
+
+header, .bx-pager, #menu-sitemap {
+  display: block; }
+
 body {
   font-family: Georgia, serif;
   font-size: 12px;
@@ -436,7 +467,7 @@ HEADER STYLES
   .header .search {
     position: relative;
     float: right;
-    padding: 16px 0 0 0; }
+    padding: 16px 0 20px 0; }
     .header .search span {
       font-family: Arial, sans-serif;
       font-size: 12px;
@@ -448,7 +479,7 @@ HEADER STYLES
     .header .search #searchform {
       display: none;
       position: absolute;
-      top: 34px;
+      top: 36px;
       right: 10px;
       width: 220px;
       height: 53px;
@@ -476,20 +507,23 @@ HEADER STYLES
         margin: -21px 0 0 151px; }
       .header .search #searchform #searchsubmit:hover {
         color: #bebdbd; }
-    .header .search span:hover + #searchform {
-      display: block; }
+
+header .search:hover #searchform {
+  display: block; }
 
 .main-banner {
   position: relative;
   height: 282px; }
-  .main-banner .top-image {
+  .main-banner #top-image {
     position: absolute;
     top: 0;
-    left: 10px; }
+    left: 10px;
+    background: none; }
   .main-banner .top-image-shadow {
     position: absolute;
     top: 478px;
-    left: 22px; }
+    left: 22px;
+    display: block; }
   .main-banner .title {
     position: absolute;
     display: block;
@@ -538,16 +572,17 @@ NAVIGATION STYLES
     position: relative;
     border-bottom: 2px solid #476980; }
     .nav li a {
-      width: 200px;
+      width: 220px;
       font-family: tahoma, sans-serif;
       font-size: 14px;
       color: white;
-      background: #2D546E;
+      background: none;
       text-transform: uppercase;
       font-family: tahoma, sans-serif;
       font-size: 14px;
       border-bottom: none;
-      padding: 8px 0; }
+      padding: 8px 0;
+      z-index: 1000; }
       .nav li a:hover, .nav li a:focus {
         color: #a4713b; }
   .nav li:last-of-type {
@@ -560,11 +595,11 @@ NAVIGATION STYLES
   display: none;
   position: absolute;
   z-index: 100;
-  left: 200px;
-  background: #C7BBAE;
-  border: 10px solid #D8CFC4;
-  padding: 8px 0;
-  top: -4px; }
+  left: 210px;
+  width: 245px;
+  top: -4px;
+  background: url(../images/bg-subnav-bottom.png) no-repeat bottom right, url(../images/bg-subnav.png) no-repeat top left;
+  padding: 14px 0; }
 
 .nav li:hover .sub-menu {
   display: block; }
@@ -777,7 +812,8 @@ HOME STYLES
   .home-top .top-nav {
     position: absolute;
     top: 220px;
-    border: none; }
+    border: none;
+    z-index: 2; }
   .home-top .home-intro {
     position: absolute;
     width: 730px;
@@ -785,7 +821,8 @@ HOME STYLES
     background-color: #981231;
     padding: 25px;
     right: 0;
-    top: 252px; }
+    top: 252px;
+    z-index: 1; }
     .home-top .home-intro h1 {
       font-family: Tahoma, sans-serif;
       font-size: 16px;
@@ -802,6 +839,7 @@ HOME STYLES
 .homepage {
   margin: 284px 0 0 0;
   width: 990px;
+  padding: 0;
   /*end of office */ }
   .homepage .locations {
     position: relative;
@@ -1129,20 +1167,34 @@ LAWYER PROFILE STYLES
       text-transform: uppercase;
       font-size: 11px;
       font-family: Tahoma;
-      margin: 0 8px; }
+      margin: 0 8px;
+      position: relative; }
+      .profile-wrap .profile-bar li div {
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: none; }
     .profile-wrap .profile-bar a {
       color: white; }
-  .profile-wrap .profile-info {
+  .profile-wrap .profile-bar li:hover div {
+    display: block; }
+  .profile-wrap #tabContainer {
+    border: 10px solid red;
+    height: 600px; }
+  .profile-wrap .tabContent {
     float: left;
     width: 645px;
+    height: 500px;
     margin: 10px 0 0 0; }
-    .profile-wrap .profile-info h1 {
+    .profile-wrap .tabContent h1 {
       font-family: Tahoma, sans-serif;
       color: #386787;
       font-size: 18px;
       font-weight: normal;
       text-transform: uppercase; }
-    .profile-wrap .profile-info p {
+    .profile-wrap .tabContent p {
       font-family: Georgia, serif;
       font-size: 13px;
       line-height: 130%; }

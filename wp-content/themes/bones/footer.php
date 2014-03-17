@@ -59,7 +59,7 @@
 							<li><a href="<?php bloginfo('url'); ?>?page_id=200">Payment</a></li>
 							<li><a href="<?php bloginfo('url'); ?>?page_id=203">Privacy Policy</a></li>
 							<li><a href="<?php bloginfo('url'); ?>?page_id=207">Terms Of Use</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=">Site Map</a></li>
+							<li><a href="<?php bloginfo('url'); ?>?page_id=524">Site Map</a></li>
 						</ul>
 
 						<div class="sm-column">

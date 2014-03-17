@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Generic Content
+Template Name: Sitemap
 */
 ?>
 
@@ -30,19 +30,11 @@ Template Name: Generic Content
 				</div>
 
 				<div class="main-content">
-					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>  
-				<?php if( have_rows('new_paragraph') ):
-				 
-				    while ( have_rows('new_paragraph') ) : the_row(); ?>
-
-				        <h1><?php the_sub_field('new_title'); ?></h1>
-				        <p><?php the_sub_field('new_content'); ?></p>
-
-				 <?php endwhile;
-				 
-				else :
-
-				endif; ?>
+				
+				 	<h1><?php the_title(); ?>s</h1>
+				    <ul>
+					<?php wp_list_pages('title_li='); ?>
+					</ul>
 
 				</div>
 			</div><!--end of main-->

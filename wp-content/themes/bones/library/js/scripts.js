@@ -106,3 +106,42 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+
+jQuery(document).ready(function(){
+  jQuery('.slider1').bxSlider({
+    slideWidth: 936,
+    minSlides: 1,
+    maxSlides: 1,
+    slideMargin: 0
+  });
+});
+
+
+jQuery(document).ready(function() {
+    //hiding tab content except first one
+    jQuery(".tabContent").not(":first").hide(); 
+    // adding Active class to first selected tab and show 
+    jQuery("ul.tabs li:first").addClass("active").show();  
+ 
+    // Click event on tab
+    jQuery("ul.tabs li").click(function() {
+        // Removing class of Active tab
+        jQuery("ul.tabs li.active").removeClass("active"); 
+        // Adding Active class to Clicked tab
+        jQuery(this).addClass("active"); 
+        // hiding all the tab contents
+        jQuery(".tabContent").hide();        
+        // showing the clicked tab's content using fading effect
+        jQuery(jQuery(this).attr("href")).fadeIn('slow'); 
+ 
+        return false;
+    });
+ 
+});
+
+
+
+
+
+

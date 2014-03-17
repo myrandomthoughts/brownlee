@@ -58,7 +58,7 @@
 		</div>
 
 		<div class="profile-bar">
-			<ul>
+			<ul class="tabs">
 				<a href=""><li>Bio</li></a>
 				<a href=""><li>Representative Work</li></a>
 				<a href=""><li>Memberships</li></a>
@@ -68,13 +68,81 @@
 				<a href=""><li>Community</li></a>
 			</ul>
 		</div>
-		<div class="profile-info">
+
+<div id="tabContainer">
+		<div class="tabContent">
 			<h1>Biography</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
-As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
+
+		<div class="tabContent">
+			<h1>Representative Work</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+
+		<div class="tabContent">
+			<h1>Presentations</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+
+		<div class="tabContent">
+			<h1>Publications</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+
+		<div class="tabContent">
+			<h1>Recognition</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+
+
+		<div class="tabContent">
+			<h1>Community</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+</div>
+
 		<input class="profile-button" type="button" name="viewall" value="View All">
 	</div>
 </div><!--end of Main-->
 
 <?php get_footer(); ?>
+
+<!-- 
+<?php
+				$field_name = "bio";
+				$field = get_field_object($field_name);
+				 
+				echo "<li>" . $field['label'] . ': ' . "<div>" . $field['value'] . "</div></li>";
+
+
+
+				$field_name = "representative_work";
+				$field = get_field_object($field_name);
+				 
+				echo "<li>" . $field['label'] . ': ' . "<div>" . $field['value'] . "</div></li>";
+
+				$field_name = "memberships";
+				$field = get_field_object($field_name);
+				 
+				echo "<li>" . $field['label'] . ': ' . "<div>" . $field['value'] . "</div></li>";
+
+				$field_name = "presentations";
+				$field = get_field_object($field_name);
+				 
+				echo "<li>" . $field['label'] . ': ' . "<div>" . $field['value'] . "</div></li>";
+
+			?>
+
+
+
+
+
+ -->
+
