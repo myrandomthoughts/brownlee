@@ -2187,11 +2187,11 @@ you can add resource intensive styles.
           left: 0;
           display: none; }
       .profile-wrap .profile-bar a {
-        color: white; }
+        color: white;
+        text-decoration: none; }
     .profile-wrap .profile-bar li:hover div {
       display: block; }
     .profile-wrap #tabContainer {
-      border: 10px solid red;
       height: 600px; }
     .profile-wrap .tabContent {
       float: left;

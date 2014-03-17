@@ -133,7 +133,7 @@ jQuery(document).ready(function() {
         // hiding all the tab contents
         jQuery(".tabContent").hide();        
         // showing the clicked tab's content using fading effect
-        jQuery(jQuery(this).attr("href")).fadeIn('slow'); 
+        jQuery(jQuery('a',this).attr("href")).fadeIn('slow'); 
  
         return false;
     });

@@ -19,6 +19,8 @@ Template Name: Front Page
 		</div>
 
 		<img class="top-image-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/home-banner-bottom.png" alt="" width="" height="" />
+		
+
 		<div class="home-top">
 
 

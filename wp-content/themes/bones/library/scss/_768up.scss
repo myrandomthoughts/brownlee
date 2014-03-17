@@ -1077,12 +1077,13 @@ LAWYER PROFILE STYLES
 
 		a {
 			color: white;
+			text-decoration: none;
 		}
 	}
 
 	.profile-bar li:hover div {display: block;}
 
-	#tabContainer {border:10px solid red; height:600px;}
+	#tabContainer {height:600px;}
 
 	.tabContent {
 		float: left;

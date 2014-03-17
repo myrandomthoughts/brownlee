@@ -59,50 +59,50 @@
 
 		<div class="profile-bar">
 			<ul class="tabs">
-				<a href=""><li>Bio</li></a>
-				<a href=""><li>Representative Work</li></a>
-				<a href=""><li>Memberships</li></a>
-				<a href=""><li>Presentations</li></a>
-				<a href=""><li>Publications</li></a>
-				<a href=""><li>Recognition</li></a>
-				<a href=""><li>Community</li></a>
+				<li><a href="#tab1">Bio</a></li>
+				<li><a href="#tab2">Representative Work</a></li>
+				<li><a href="#tab3">Memberships</a></li>
+				<li><a href="#tab4">Presentations</a></li>
+				<li><a href="#tab5">Publications</a></li>
+				<li><a href="#tab6">Recognition</a></li>
+				
 			</ul>
 		</div>
 
 <div id="tabContainer">
-		<div class="tabContent">
+		<div id="tab1" class="tabContent">
 			<h1>Biography</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
 
-		<div class="tabContent">
+		<div id="tab2" class="tabContent">
 			<h1>Representative Work</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
 
-		<div class="tabContent">
+		<div id="tab3" class="tabContent">
+			<h1>Memberships</h1>
+			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
+			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
+		</div>
+
+		<div id="tab4" class="tabContent">
 			<h1>Presentations</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
 
-		<div class="tabContent">
+		<div id="tab5" class="tabContent">
 			<h1>Publications</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
 
-		<div class="tabContent">
+
+		<div id="tab6" class="tabContent">
 			<h1>Recognition</h1>
-			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
-			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
-		</div>
-
-
-		<div class="tabContent">
-			<h1>Community</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
 		</div>
