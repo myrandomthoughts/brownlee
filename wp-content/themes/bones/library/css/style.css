@@ -603,17 +603,19 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-.search, #menu-top-menu, .top-image-shadow, .locations {
+.search, #menu-top-menu, .top-image-shadow, .lawyer-search, #menu-sitemap, .site-map {
   display: none; }
 
 header {
   background: #000;
   padding: 10px 0;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  height: 140px; }
 
 #top-image {
-  background: #000; }
+  background: #000;
+  position: relative; }
 
 .bx-pager {
   display: none; }
@@ -623,6 +625,9 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #565656; }
+
+select {
+  border-radius: 0; }
 
 #menu-sitemap {
   display: none; }
@@ -635,13 +640,11 @@ body {
     border: none;
     z-index: 2; }
   .home-top .home-intro {
-    position: absolute;
+    position: relative;
     width: 100%;
     background-color: #981231;
     padding: 20px;
-    right: 0;
-    top: -142px;
-    z-index: 1; }
+    z-index: 1111; }
     .home-top .home-intro h1 {
       font-family: Tahoma, sans-serif;
       font-size: 12px;
@@ -655,9 +658,112 @@ body {
       line-height: 150%;
       color: #FAF3F4; }
 
+#logo {
+  width: 300px;
+  height: 86px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0 0 0; }
+  #logo img {
+    width: 300px;
+    height: 86px; }
+
 .homepage {
-  margin: 80px 0 0 0;
-  padding: 40px; }
+  margin: 0px 0 0 0;
+  padding: 20px;
+  clear: both;
+  display: block; }
+
+.sidebar-entry {
+  width: 100%;
+  padding: 20px;
+  display: none; }
+  .sidebar-entry .text-wrap {
+    height: 191px;
+    overflow: hidden; }
+  .sidebar-entry .news-item {
+    position: relative;
+    overflow: hidden; }
+    .sidebar-entry .news-item .full-front {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      width: 20px;
+      padding: 2px;
+      color: #fff;
+      background: #A4713B;
+      margin: 0 0 4px 0;
+      display: block; }
+  .sidebar-entry span {
+    display: block;
+    font-family: Georgia, serif;
+    color: #981231;
+    border-bottom: 2px solid #E7E0D8; }
+  .sidebar-entry h3 {
+    font-family: tahoma, sans-serif;
+    color: #386787;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 3px 0; }
+  .sidebar-entry a {
+    color: #A4713B;
+    text-transform: capitalize;
+    font-family: Georgia, sans-serif;
+    font-size: 12px;
+    text-decoration: none; }
+  .sidebar-entry a:hover {
+    color: #A4713B;
+    text-decoration: underline; }
+  .sidebar-entry .full {
+    display: block;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 20px;
+    padding: 2px;
+    color: #fff;
+    background: #A4713B; }
+  .sidebar-entry .view {
+    display: block;
+    color: #386787;
+    border-top: 2px solid #E7E0D8;
+    padding: 4px 0 0 0; }
+  .sidebar-entry p {
+    font-size: 12px; }
+
+.locations .office h3 {
+  display: none; }
+
+/*end of office */
+.flyout-wrap {
+  position: relative;
+  margin: 0 0 40px 0; }
+  .flyout-wrap h2 {
+    color: #2D546E;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: none;
+    text-align: left;
+    border-bottom: 2px solid #b2a89e;
+    padding: 0 0 10px 0; }
+  .flyout-wrap #map {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: none; }
+  .flyout-wrap .flyout-wrap {
+    width: 158px; }
+    .flyout-wrap .flyout-wrap p span {
+      text-align: left; }
+  .flyout-wrap a {
+    color: #A4713B !important;
+    text-decoration: none;
+    padding: 4px 0; }
+  .flyout-wrap a:hover {
+    text-decoration: underline; }
+  .flyout-wrap a:last-of-type {
+    display: none;
+    background: url(../images/location-arrow.png) no-repeat left 4px; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1079,13 +1185,24 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.bx-wrapper {
+  position: relative; }
+
 .bx-wrapper .bx-viewport {
+  position: relative;
   left: -5px; }
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   position: absolute;
   bottom: 122px;
+  width: 100%;
+  z-index: 10000; }
+
+.bx-wrapper {
+  width: 100%; }
+
+.bx-wrapper img {
   width: 100%; }
 
 /* LOADER */
@@ -1299,16 +1416,6 @@ tweeners.
    */
   /** RESET AND LAYOUT
   ===================================*/
-  .bx-wrapper {
-    position: relative;
-    margin: 0 auto 60px;
-    padding: 0;
-    *zoom: 1; }
-
-  .bx-wrapper img {
-    max-width: 100%;
-    display: block; }
-
   /** THEME
   ===================================*/ }
 /*
@@ -1415,7 +1522,7 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
-  .search, #menu-top-menu {
+  .search, #menu-top-menu, .lawyer-search, .sidebar-entry, #menu-sitemap, .site-map {
     display: block; }
 
   header, .bx-pager, #menu-sitemap {
@@ -1462,7 +1569,10 @@ you can add resource intensive styles.
       padding: 15px 10px;
       color: #bebdbd;
       text-decoration: none;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transition: all 0.2s ease-in-out;
+      -transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
     .header #top-section ul li a:hover {
       color: #a4713b; }
     .header #active {
@@ -1471,7 +1581,8 @@ you can add resource intensive styles.
       width: 347px;
       height: 94px;
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 20px 0 0 0; }
     .header .current-menu-item {
       color: #a4713b; }
     .header .search {
@@ -1487,13 +1598,17 @@ you can add resource intensive styles.
       .header .search span:hover {
         cursor: pointer; }
       .header .search #searchform {
-        display: none;
         position: absolute;
-        top: 36px;
+        top: 40px;
         right: 10px;
         width: 220px;
         height: 53px;
-        background: url(../images/search-bg.png) top left no-repeat; }
+        background: url(../images/search-bg.png) top left no-repeat;
+        overflow: hidden;
+        -webkit-transition: all 0.2s ease-in-out;
+        -transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 0; }
         .header .search #searchform .screen-reader-text {
           display: none; }
         .header .search #searchform #s {
@@ -1511,15 +1626,25 @@ you can add resource intensive styles.
           border: none;
           text-align: center;
           text-transform: uppercase;
-          padding: 2px 4px;
+          padding: 3px 7px;
           color: #fff;
           background: #a4713b;
-          margin: -21px 0 0 151px; }
+          margin: -21px 0 0 189px; }
         .header .search #searchform #searchsubmit:hover {
           color: #bebdbd; }
 
+  header .search span {
+    -webkit-transition: all 0.2s ease-in-out;
+    -transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+
+  header .search:hover span {
+    color: #a4713b; }
+
   header .search:hover #searchform {
-    display: block; }
+    top: 30px;
+    opacity: 1;
+    overflow: visible; }
 
   .main-banner {
     position: relative;
@@ -1528,7 +1653,10 @@ you can add resource intensive styles.
       position: absolute;
       top: 0;
       left: 10px;
-      background: none; }
+      background: none;
+      display: block;
+      width: 958px;
+      z-index: 1; }
     .main-banner .top-image-shadow {
       position: absolute;
       top: 478px;
@@ -1722,7 +1850,7 @@ you can add resource intensive styles.
       font-size: 18px;
       font-weight: normal;
       text-transform: uppercase;
-      width: 90%;
+      width: 100%;
       padding: 15px 0 6px;
       border-bottom: 2px solid #D8CFC4; }
     .lawyer-search p {
@@ -1790,7 +1918,7 @@ you can add resource intensive styles.
     .site-map .sm-right {
       float: left;
       height: 182px;
-      width: 675px;
+      width: 710px;
       background: url(../images/sitemap-right-bg.png) top left repeat-x; }
       .site-map .sm-right .sm-top-nav {
         margin: 12px 0 0 36px; }
@@ -1884,7 +2012,8 @@ you can add resource intensive styles.
   .sidebar-entry {
     float: left;
     width: 200px;
-    margin: 0 20px; }
+    margin: 0 20px;
+    padding: 0; }
     .sidebar-entry .text-wrap {
       height: 191px;
       overflow: hidden; }
@@ -1941,7 +2070,6 @@ you can add resource intensive styles.
     position: absolute;
     width: 255px;
     height: 250px;
-    background: url(../images/arrow.png) 0px no-repeat;
     background-color: #c7bbae;
     border: 10px solid #d8cfc4;
     padding: 18px;
@@ -1964,9 +2092,17 @@ you can add resource intensive styles.
       top: 72px;
       background: none; }
     .flyout .flyout-wrap {
-      width: 158px; }
+      width: 158px;
+      position: relative; }
       .flyout .flyout-wrap p span {
         text-align: left; }
+      .flyout .flyout-wrap .flyout-arrow {
+        height: 20px;
+        width: 20px;
+        background: url(../images/arrow.png) 0px no-repeat;
+        position: absolute;
+        top: 80px;
+        left: -34px; }
     .flyout a {
       color: #A4713B !important;
       text-decoration: none;

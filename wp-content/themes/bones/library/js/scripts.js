@@ -110,6 +110,7 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function(){
   jQuery('.slider1').bxSlider({
+    mode: 'fade',
     slideWidth: 936,
     minSlides: 1,
     maxSlides: 1,
