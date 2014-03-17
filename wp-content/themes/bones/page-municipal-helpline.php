@@ -45,14 +45,6 @@ Template Name: Municipal Helpline
 
 					endif; ?>
 
-					<div class="municipal-contact">
-						<h3>Contact our Municipal Helpine:</h3>
-						<ul>
-							<li><?php the_field('muni_edmonton_ph') ?> (Edmonton)</li>
-							<li><?php the_field('muni_calgary_ph') ?> (Calgary)</li>
-						</ul>
-						<em>or directly by e-mail to a member of our <a href="">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
-					</div>
 				</div>
 			</div><!--end of main-->
 
