@@ -1221,7 +1221,7 @@ tweeners.
 */
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: 
+  Site Name:
   Author: 
   
   Stylesheet: 481px and Up Stylesheet
@@ -2650,6 +2650,7 @@ be set to display none.
 
   @page {
     margin: 0.5cm; }
+
   p, h2, h3 {
     orphans: 3;
     widows: 3; }

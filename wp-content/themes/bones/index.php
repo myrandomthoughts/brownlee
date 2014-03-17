@@ -12,9 +12,9 @@ Template Name: Front Page
 
 		<div id="top-image">
 			<div class="slider1">
-		  		<div class="slide"><img src="http://localhost/wp-content/themes/bones/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="http://localhost/wp-content/themes/bones/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="http://localhost/wp-content/themes/bones/library/images/home-banner.png"></div>
+		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
+		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
+		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
 			</div>
 		</div>
 
@@ -121,7 +121,7 @@ Template Name: Front Page
 			<div class="news-item">	
 				<div class="text-wrap">
 					<a href="<?php the_permalink(); ?>"><?php the_field( 'ne_title' ); ?></a>
-
+					<?php the_field( 'ne_content' ); ?>
 					<p><?php the_excerpt(); ?></p>
 					<a class="full-front" href="<?php the_permalink(); ?>">></a>
 				</div>

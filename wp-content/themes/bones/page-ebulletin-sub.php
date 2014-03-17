@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Practice Areas
+Template Name: E-Bulletins Sub-template
 */
 ?>
 
@@ -26,41 +26,29 @@ Template Name: Practice Areas
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_template_part('bulletin'); ?>
+					<?php get_template_part( 'news-events' ); ?>
 				</div>
 
-				<div class="main-content practice-areas">
-					<ul>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>					
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>					
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
-					</ul>
+				<div class="main-content">
+					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+
+				<?php if( have_rows('new_paragraph') ):
+				 
+				    while ( have_rows('new_paragraph') ) : the_row(); ?>
+
+				        <h1><?php the_sub_field('new_title'); ?></h1>
+				        <p><?php the_sub_field('new_content'); ?></p>
+
+				        <a href="<?php the_permalink(); ?>">Read More...</a>
+					    
+
+				 <?php endwhile;
+				 
+				else :
+
+				endif; ?>
+
 				</div>
-
-<!-- 
-	<?php
-		$args = array(
-			'post_type' => 'biography',
-			
-		);
-
-
-		$bio = new WP_Query( $args );
-		if( $bio->have_posts() ) {
-			while( $bio->have_posts() ) {
-				$bio->the_post();
-				?>
-					<h1><?php the_field('name'); ?></h1>
-					<h2><?php the_field('practice_areas'); ?></h2>
-				<?php
-			}
-		}
-	?> -->
 			</div><!--end of main-->
 
 <?php get_footer(); ?>

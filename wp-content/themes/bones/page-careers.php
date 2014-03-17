@@ -32,20 +32,21 @@ Template Name: Careers
 				<div class="main-content careers" id="top">
 					<?php the_field('top_paragraph'); ?>
 
-				<?php if( have_rows('new_paragraph') ):
-				 
-				    while ( have_rows('new_paragraph') ) : the_row(); ?>
+					<?php if( have_rows('new_paragraph') ):
+					 
+					    while ( have_rows('new_paragraph') ) : the_row(); ?>
 
-				        <h1><?php the_sub_field('new_title'); ?></h1>
-				        <p><?php the_sub_field('new_content'); ?></p>
-	        
-				        <a class="full" href="<?php the_permalink(); ?>">View</a>
-				 <?php endwhile;
-				 
-				else :
+					        <h1><?php the_sub_field('new_title'); ?></h1>
+					        <p><?php the_sub_field('new_content'); ?></p>
+		        
+					        <a class="full" href="<?php the_permalink(); ?>">View</a>
+					 <?php endwhile;
+					 
+					else :
 
-				endif; ?>
+					endif; ?>
 
+					<?php the_field('resources_disclaimer'); ?>
 				</div>
 			</div><!--end of main-->
 
