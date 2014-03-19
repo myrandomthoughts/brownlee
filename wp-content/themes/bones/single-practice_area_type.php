@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Careers
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div class="main">
@@ -22,28 +16,23 @@ Template Name: Careers
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
-					<?php get_template_part( 'news-events' ); ?>
+					<?php get_template_part('bulletin-news-events-muni'); ?>
 				</div>
 
-				<div class="main-content careers" id="top">
-					<?php the_field('top_paragraph'); ?>
-
+				<div class="single-wrap main-content">
 					<?php if( have_rows('new_paragraph') ):
-					 
-					    while ( have_rows('new_paragraph') ) : the_row(); ?>
+				 
+				    while ( have_rows('new_paragraph') ) : the_row(); ?>
 
-					        <h1><?php the_sub_field('new_title'); ?></h1>
-					        <p><?php the_sub_field('new_content'); ?></p>
-		        
-					        <a class="full" href="<?php the_permalink(); ?>">View</a>
+				        <h1><?php the_sub_field('new_title'); ?></h1>
+				        <p><?php the_sub_field('new_content'); ?></p>
+
 					 <?php endwhile;
-					 
+				 
 					else :
 
 					endif; ?>
-
-					<?php the_field('resources_disclaimer'); ?>
-				</div>
-			</div><!--end of main-->
+					</div>
+			</div><!--end of single-->
 
 <?php get_footer(); ?>

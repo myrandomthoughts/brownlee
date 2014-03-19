@@ -16,11 +16,7 @@ Template Name: Lawyers
 						<h1><?php the_title(); ?></h1>
 					</div>
 
-					<div class="side-module">
-							<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/print.png" alt="" width="" height="" /></a>
-							<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/email.png" alt="" width="" height="" /></a>
-							<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/pdf.png" alt="" width="" height="" /></a>
-					</div>
+					<?php get_template_part( 'part-side-module' ); ?>
 
 				</div><!--end of main banner-->	
 
@@ -36,7 +32,7 @@ Template Name: Lawyers
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 				<div class="single-lawyer">
-					<?php the_post_thumbnail( 'thumbnail' ); ?>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
 
 					<div class="lawyer-name">
 						<?php the_title( '<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a>' ); ?>

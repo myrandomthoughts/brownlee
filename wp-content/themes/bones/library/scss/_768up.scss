@@ -168,7 +168,26 @@ header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 	position: relative;
 	height: 282px;
 
-	 
+	#banner-announcement {
+		position: absolute;
+		bottom: 24px;
+		left: 62px;
+		z-index: 100;
+		font-size: 16px;
+		font-family: Tahoma, sans-serif;
+		color: #fff;
+		width: 835px;
+		background: rgba(0,0,0,0.5);
+		/*box-shadow: 0 1px 5px #ddd;*/
+	}
+
+	 .banner-shadow {
+	 	position: absolute;
+	 	top: 0;
+	 	left: 10;
+	 	z-index: -10;
+	 }
+
 	#top-image {
 		position: absolute;
 		top: 0;
@@ -205,6 +224,10 @@ header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 		padding: 38px 0 0 0;
 		margin: 0 0 0 48px;
 		border-bottom: 2px solid #AE445D;
+
+		span {
+			color: #d6a0ad;
+		}
 	}
 
 	.side-module {
@@ -400,7 +423,7 @@ SIDEBARS & ASIDES
 
 		li {
 			background: url(../images/phone.png) top left no-repeat;
-			padding: 0 0 0 20px;
+			padding: 3px 0 3px 20px;
 			font-weight: 900;
 		}
 
@@ -1159,7 +1182,6 @@ LAWYER MAIN STYLES
 		a {
 			color: #a4713b;
 			text-decoration: none;
-			vertical-align: 150%; 
 		}
 
 		a:hover {
@@ -1291,6 +1313,7 @@ CONTACT STYLES
 		.contact-info {
 			width: 215px;
 			margin: 10px 40px 0 0;
+			line-height: 22px;
 
 			span{
 				text-align: left;
@@ -1508,6 +1531,7 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
 
 	a {
 		text-decoration: none;
+		color: #A4713B;
 	}
 
 	h2 {

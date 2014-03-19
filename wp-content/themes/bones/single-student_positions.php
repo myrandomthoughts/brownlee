@@ -9,11 +9,8 @@
 			<h1><?php the_field('name'); ?></h1>
 		</div>
 
-		<div class="side-module">
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/print.png" alt="" width="" height="" /></a>
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/email.png" alt="" width="" height="" /></a>
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/pdf.png" alt="" width="" height="" /></a>
-		</div>
+		<?php get_template_part( 'part-side-module' ); ?>
+		
 	</div><!--end of main banner-->
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>

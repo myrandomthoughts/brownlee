@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Sitemap
+Template Name: Edmonton Map
 */
 ?>
 
@@ -9,8 +9,6 @@ Template Name: Sitemap
 			<div class="main">
 
 				<div class="main-banner">
-
-					<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/about-us-banner.png" alt="" width="" height="" />
 				
 					<div class="title">
 						<h1><?php the_title(); ?></h1>
@@ -26,12 +24,8 @@ Template Name: Sitemap
 				</div>
 
 				<div class="main-content">
-				
-				 	<h1><?php the_title(); ?>s</h1>
-				    <ul>
-					<?php wp_list_pages('title_li='); ?>
-					</ul>
-
+					<h1>Edmonton Map</h1>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2370.881477317133!2d-113.4955792!3d53.54203044999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022461805b66d%3A0x39b9ff401f7b3fd0!2s10155+102+St+NW!5e0!3m2!1sen!2sca!4v1395189441696" width="600" height="600" frameborder="0" style="border:0"></iframe>
 				</div>
 			</div><!--end of main-->
 

@@ -9,8 +9,11 @@ Template Name: Front Page
 <div class="main">
 
 	<div class="main-banner">
+		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
+		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
+			<div class="banner-shadow"><img src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png"></div>
 			<div class="slider1">
 		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
 		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
@@ -23,11 +26,10 @@ Template Name: Front Page
 
 		<div class="home-top">
 
-
-		<?php bones_main_nav(); ?>
+			<?php bones_main_nav(); ?>
 
 			<div class="home-intro">
-					<h1><?php the_field( 'opening_heading' ); ?></h1>
+				<h1><?php the_field( 'opening_heading' ); ?></h1>
 				<p><?php the_field( 'opening_paragraph' ); ?></p>
 			</div>
 
@@ -48,12 +50,8 @@ Template Name: Front Page
 						<h2>Edmonton</h2>
 						<a id="map" href="">Map</a>
 						<p>
-							<span>2200 Commerce Place</span><br>
-							<span>10155 - 102 Street</span><br>
-							<span>Edmonton, AB T5J 4G8</span><br><br>
-							<span>TEL:(780)497-4800</span><br>
-							<span>FAX:(780)424-3254</span><br>
-							<a href="mailto:contactus@brownleelaw.com">contactus@brownleelaw.com</a><br>
+							<?php the_field('edmonton_address'); ?>
+							<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
 							<a href="">View Full Contact Details</a><br>
 						</p>
 					</div>
@@ -69,12 +67,8 @@ Template Name: Front Page
 					<h2>Calgary</h2>
 					<a id="map" href="">Map</a>
 					<p>
-						<span>7th Floor</span><br>
-						<span>396 - 11th Avenue S.W.</span><br>
-						<span>Calgary, AB  T2R 0C5</span><br><br>
-						<span>TEL:(403) 232-8300</span><br>
-						<span>FAX:(403) 232-8408</span><br>
-						<a href="mailto:contactus@brownleelaw.com">contactus@brownleelaw.com</a><br>
+						<?php the_field('calgary_address'); ?>
+						<a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a><br>
 						<a href="">View Full Contact Details</a><br>
 					</p>
 				</div>
@@ -124,7 +118,7 @@ Template Name: Front Page
 			<div class="news-item">	
 				<div class="text-wrap">
 					<a href="<?php the_permalink(); ?>"><?php the_field( 'ne_title' ); ?></a>
-					<?php the_field( 'ne_content' ); ?>
+					
 					<p><?php the_excerpt(); ?></p>
 					<a class="full-front" href="<?php the_permalink(); ?>">></a>
 				</div>

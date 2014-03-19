@@ -1649,6 +1649,22 @@ you can add resource intensive styles.
   .main-banner {
     position: relative;
     height: 282px; }
+    .main-banner #banner-announcement {
+      position: absolute;
+      bottom: 24px;
+      left: 62px;
+      z-index: 100;
+      font-size: 16px;
+      font-family: Tahoma, sans-serif;
+      color: #fff;
+      width: 835px;
+      background: rgba(0, 0, 0, 0.5);
+      /*box-shadow: 0 1px 5px #ddd;*/ }
+    .main-banner .banner-shadow {
+      position: absolute;
+      top: 0;
+      left: 10;
+      z-index: -10; }
     .main-banner #top-image {
       position: absolute;
       top: 0;
@@ -1679,6 +1695,8 @@ you can add resource intensive styles.
       padding: 38px 0 0 0;
       margin: 0 0 0 48px;
       border-bottom: 2px solid #AE445D; }
+      .main-banner .title h1 span {
+        color: #d6a0ad; }
     .main-banner .side-module {
       position: absolute;
       display: block;
@@ -1822,7 +1840,7 @@ you can add resource intensive styles.
         text-transform: uppercase; }
       .sidebar .municipal-contact li {
         background: url(../images/phone.png) top left no-repeat;
-        padding: 0 0 0 20px;
+        padding: 3px 0 3px 20px;
         font-weight: 900; }
       .sidebar .municipal-contact a {
         color: #a4713b;
@@ -2372,8 +2390,7 @@ you can add resource intensive styles.
         border: 3px solid #C0B6AA; }
       .all-lawyers .single-lawyer a {
         color: #a4713b;
-        text-decoration: none;
-        vertical-align: 150%; }
+        text-decoration: none; }
       .all-lawyers .single-lawyer a:hover {
         color: #0b3768;
         text-decoration: underline; }
@@ -2463,7 +2480,8 @@ you can add resource intensive styles.
         margin: 10px 40px 0 0; }
       .contacts .contacts-wrap .contact-info {
         width: 215px;
-        margin: 10px 40px 0 0; }
+        margin: 10px 40px 0 0;
+        line-height: 22px; }
         .contacts .contacts-wrap .contact-info span {
           text-align: left; }
       .contacts .contacts-wrap .map {
@@ -2606,7 +2624,8 @@ you can add resource intensive styles.
     width: 620px;
     margin: 0 0 0 30px; }
     .nee-wrap a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #A4713B; }
     .nee-wrap h2 {
       font-family: tahoma, sans-serif;
       color: #386787;

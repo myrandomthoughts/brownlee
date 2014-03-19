@@ -46,7 +46,7 @@
 				<div class="site-map">
 
 					<div class="sm-left">
-						<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/linkedin-s.png" alt="" width="" height="" /></a>
+						<a href="http://www.linkedin.com/company/brownlee-llp"><img src="<?php bloginfo('template_directory'); ?>/library/images/linkedin-s.png" alt="" width="" height="" /></a>
 						<p>Site Design : <a href="http://www.skunkworks.ca/">Skunkworks Creative Group</a></p>
 					</div>
 

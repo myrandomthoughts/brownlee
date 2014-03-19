@@ -6,14 +6,11 @@
 		<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/about-us-banner.png" alt="" width="" height="" />
 
 		<div class="title">
-			<h1><?php the_field('name'); ?></h1>
+			<h1><?php the_field('name'); ?><span> - <?php the_field('lawyer_title'); ?></span></h1>
 		</div>
 
-		<div class="side-module">
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/print.png" alt="" width="" height="" /></a>
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/email.png" alt="" width="" height="" /></a>
-				<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/pdf.png" alt="" width="" height="" /></a>
-		</div>
+		<?php get_template_part( 'part-side-module' ); ?>
+		
 	</div><!--end of main banner-->
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
@@ -42,7 +39,6 @@
 			 <a class="linkedin" href="<?php the_field('linkedin_link'); ?>"><img src="<?php bloginfo('template_directory'); ?>/library/images/linkedin.png" alt="" width="" height="" /> </a>
 
 			<?php endif; ?>
-
 
 			<dl>
 				<dt>Location:</dt><dd><?php the_field('location'); ?></dd>
