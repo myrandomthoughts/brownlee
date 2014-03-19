@@ -29,8 +29,8 @@ Template Name: News
 
 				<div class="nee-wrap">
 					<?php the_field('text_entry'); ?>
-					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>  
 
+					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>  
 
 					<div class="nee-list">
 						<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '6') );

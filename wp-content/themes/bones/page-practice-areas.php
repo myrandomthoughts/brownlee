@@ -25,19 +25,18 @@ Template Name: Practice Areas
 					<?php get_template_part('bulletin'); ?>
 				</div>
 
+
 				<div class="main-content practice-areas">
 					<ul>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>					
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>					
-						<li><a href="">Practice Area</a></li>
-						<li><a href="">Practice Area</a></li>
+					<?php $loop = new WP_Query( array( 'post_type' => 'practice_area_type') );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				
+						<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+					<?php endwhile; wp_reset_postdata(); ?>
 					</ul>
 				</div>
-
+				
 <!-- 
 	<?php
 		$args = array(
