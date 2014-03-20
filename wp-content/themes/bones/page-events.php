@@ -28,7 +28,9 @@ Template Name: Events
 
 				<div class="nee-wrap">
 					<div class="nee-list">
-						<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '6') );
+						<?php 
+						$paged = get_query_var('paged');
+						$loop = new WP_Query( array( 'post_type' => 'events', 'paged' => $paged, 'posts_per_page' => '6') );
 						while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<div class="nee-item">
 							<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>
@@ -37,7 +39,7 @@ Template Name: Events
 							<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
 						</div>
 
-						<?php endwhile; wp_reset_postdata(); ?>
+						<?php endwhile; wp_pagenavi(array('query' => $loop)); wp_reset_postdata(); ?>
 					</div>
 					
 					<a id="top" href="#main">Back to top</a>

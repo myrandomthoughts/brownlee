@@ -17,6 +17,18 @@
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
 					<?php get_template_part('bulletin-news-events-muni'); ?>
+
+					<?php
+					$practice_areas = get_field('practice_area');
+
+					if( $practice_areas ): 
+					 	foreach ($practice_areas as $k => $pid) {
+					 		print '<a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a>';
+					 	}
+					 
+					 endif; 
+					 ?>
+				
 				</div>
 
 				<div class="single-wrap main-content">

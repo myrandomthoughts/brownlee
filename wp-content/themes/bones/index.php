@@ -11,7 +11,7 @@ Template Name: Front Page
 	<div class="main-banner">
 
 		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
-		
+
 		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
@@ -127,7 +127,7 @@ Template Name: Front Page
 			</div>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-			<a class="view" href="<?php bloginfo('url'); ?>/?page_id=193">View Events</a>
+			<a class="view" href="<?php bloginfo('url'); ?>/?page_id=117">View E-Bulletins</a>
 		</div><!--end of sidebar entry-->
 	</div><!--end of homepage-->
 

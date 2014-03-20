@@ -54,7 +54,8 @@
 						<ul class="sm-top-nav">
 							<li>Copyright &copy; 2014 Brownlee LLP</li>
 							<li><a href="home_url();">Home</a></li>
-							<li><a href="<?php bloginfo('url'); ?>/?page_id=193">Contact</a></li>
+							<!-- <li><a href="<?php //bloginfo('url'); ?>/?page_id=193">Contact</a></li> -->
+							<li><a href="<?php print get_page_link(193); ?>">Contact</a></li>
 							<li><a href="<?php bloginfo('url'); ?>?page_id=119">Login</a></li>
 							<li><a href="<?php bloginfo('url'); ?>?page_id=200">Payment</a></li>
 							<li><a href="<?php bloginfo('url'); ?>?page_id=203">Privacy Policy</a></li>

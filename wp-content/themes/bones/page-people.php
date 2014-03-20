@@ -32,7 +32,7 @@ Template Name: People
 
 					        <h1><?php the_sub_field('new_title'); ?></h1>
 					        <p><?php the_sub_field('new_content'); ?></p>
-					        <a class="full" href="">View</a>
+					        <a class="full" href="<?php the_sub_field('page_link'); ?>">View</a>
 
 					 <?php endwhile;
 					 

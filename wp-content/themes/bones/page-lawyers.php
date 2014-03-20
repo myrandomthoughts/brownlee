@@ -27,8 +27,14 @@ Template Name: Lawyers
 
 			<div class="all-lawyers">
 
-				<?php $loop = new WP_Query( array( 'post_type' => 'biography',
-												   'order'     => 'title') );
+				<?php $loop = new WP_Query( 
+											array( 	'post_type' => 'biography',
+													'order' 	=> 'ASC',
+												   	'orderby'   => 'meta_value', 
+												   	'meta_key' 	=> 'name'
+												) 
+										);
+				
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 				<div class="single-lawyer">

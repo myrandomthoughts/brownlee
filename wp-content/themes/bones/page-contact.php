@@ -29,7 +29,7 @@ Template Name: Contact
 			<div class="contacts">
 				<div class="contacts-wrap">
 					<h2>Edmonton Office</h2>
-					<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/contact-ed.png" alt="" width="" height="" /></a>
+					<img src="<?php bloginfo('template_directory'); ?>/library/images/contact-ed.png" alt="" width="" height="" />
 					<div class="contact-info">
 						<?php the_field('edmonton_address'); ?>
 						<span><a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a></span></br>
@@ -43,7 +43,7 @@ Template Name: Contact
 
 				<div class="contacts-wrap">
 					<h2>Calgary Office</h2>
-					<a href=""><img src="<?php bloginfo('template_directory'); ?>/library/images/contact-cal.png" alt="" width="" height="" /></a>
+					<img src="<?php bloginfo('template_directory'); ?>/library/images/contact-cal.png" alt="" width="" height="" />
 					<div class="contact-info">
 						<?php the_field('calgary_address'); ?>
 						<span><a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a></span></br>

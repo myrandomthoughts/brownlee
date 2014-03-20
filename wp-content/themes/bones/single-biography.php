@@ -15,18 +15,17 @@
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
 		<h2>Practice Areas</h2>
-
-		<?php the_field('practice_areas'); ?>
 		<?php 
  
-		$term = get_field('practice_areas');
+		$practice_areas = get_field('practice_area_relationship');
+
+		if( $practice_areas ): 
+		 	foreach ($practice_areas as $k => $pid) {
+		 		print '<a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a>';
+		 	}
 		 
-		if( $term ): ?>
-		 
-			<h2><?php echo $term ?></h2>
-			<p><?php echo $term->name; ?></p>
-		 
-		<?php endif; ?>
+		 endif; 
+		 ?>
 
 
 	</div>
@@ -55,18 +54,47 @@
 
 		<div class="profile-bar">
 			<ul class="tabs">
-				<li><a href="#tab1">Bio</a></li>
+				<?php
+					$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations');
+					$tabnum = 1;
+
+					foreach ($tab_filed_names as $key => $value) {
+
+						$tabcont = get_field($value);
+						if(!empty($tabcont)){
+							print '<li><a href="#tab'.$tabnum.'">'.$key.'</a></li>';
+							$tabnum++;
+						}
+					}
+				?>
+				<!-- <li><a href="#tab1">Bio</a></li>
 				<li><a href="#tab2">Representative Work</a></li>
 				<li><a href="#tab3">Memberships</a></li>
 				<li><a href="#tab4">Presentations</a></li>
 				<li><a href="#tab5">Publications</a></li>
 				<li><a href="#tab6">Recognition</a></li>
-				
+				 -->
 			</ul>
 		</div>
 
 <div id="tabContainer">
-		<div id="tab1" class="tabContent">
+	<?php
+		
+		$tabnum = 1;
+		$tab_filed_names = array( 'Biography' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations');
+		foreach ($tab_filed_names as $key => $value) {
+			$tabcont = get_field($value);
+			d($tabcont);
+			if(!empty($tabcont)){
+				print 	'<div id="tab'. $tabnum .'" class="tabContent">
+							<h1>'. $key .'</h1>
+							'. $tabcont .'
+						</div>';
+				$tabnum++;
+			}
+		}
+	?>
+		<!-- <div id="tab1" class="tabContent">
 			<h1>Biography</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
@@ -101,7 +129,7 @@
 			<h1>Recognition</h1>
 			<p>Having spent several years of his practice conducting commercial and insurance litigation, Sean has a wealth of experience in addressing commercial disputes. He has provided his clients with advice and guidance on commercial transactions, mortgage financing, and leasing matters. Though focused on real estate, Sean’s experience extends to all manner of commercial transactions, including asset purchases and sales, property development and non-real estate backed security.
 			As part of his core practice, Sean typically represents banks and other lenders in the assessment and placement of security.  Sean also frequently represents borrowers to assist with their financing needs, particularly during the acquisition or development of property.</p>
-		</div>
+		</div> -->
 </div>
 
 		<input class="profile-button" type="button" name="viewall" value="View All">

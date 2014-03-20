@@ -35,8 +35,8 @@ Template Name: E-Bulletins
 				        <h1><?php the_sub_field('new_title'); ?></h1>
 				        <p><?php the_sub_field('new_content'); ?></p>
 
-				        <a class="full" href="<?php the_permalink(); ?>">Archives</a>
-					    <a class="full" href="<?php bloginfo('url'); ?>?page_id=528">Subscribe</a>
+				        <a class="full" href="<?php  the_sub_field('page_link'); ?>">Archives</a>
+					    <a class="full" href="<?php print get_page_link(528); ?>">Subscribe</a>
 
 				 <?php endwhile;
 				 
