@@ -16,12 +16,21 @@ Template Name: Front Page
 
 		<div id="top-image">
 			<div class="banner-shadow"><img src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png"></div>
+			
 			<div class="slider1">
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
+				<?php if( have_rows('carousel') ):
+				 while ( have_rows('carousel') ) : the_row(); ?>
+		  		<div class="slide">
+		  			  <h1></h1>
+		  			<img src="<?php the_sub_field('carousel_image'); ?>">
+		  			<a href="<?php the_sub_field('carousel_link'); ?>"><?php the_sub_field('carousel_text'); ?></a>
+		  		</div>
+		  		 <?php endwhile;
+				endif; ?>
 			</div>
 		</div>
+
+
 
 		<img class="top-image-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/home-banner-bottom.png" alt="" width="" height="" />
 		

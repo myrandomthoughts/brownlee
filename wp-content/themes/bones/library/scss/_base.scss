@@ -199,6 +199,14 @@ select {border-radius:0;}
 }
 
 
+.slide {height: 309px; position: relative;
+	img {position: absolute; top:0; left:0; z-index:1;}
+	a {position: absolute; bottom:120px; left:50px; z-index:2; font-size:42px; color:#fff; text-shadow: 1px 1px 2px #000; text-decoration: none;}
+	a:hover {text-decoration: underline; color: #fff;}
+	a:visited {color: #fff;}
+}
+
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -974,7 +982,7 @@ FOOTER STYLES
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
-	bottom: 122px;
+	bottom: 72px;
 	width: 100%;
 	z-index:10000;
 }
