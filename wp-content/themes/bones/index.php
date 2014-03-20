@@ -10,8 +10,6 @@ Template Name: Front Page
 
 	<div class="main-banner">
 
-		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
-
 		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
