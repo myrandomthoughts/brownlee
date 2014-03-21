@@ -10,10 +10,13 @@ Template Name: Front Page
 
 	<div class="main-banner">
 
+<<<<<<< HEAD
 
 		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
 
 
+=======
+>>>>>>> 46359660667ca5b74232f8c2e8d9574e39e6865d
 		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
@@ -31,6 +34,8 @@ Template Name: Front Page
 				endif; ?>
 			</div>
 		</div>
+
+
 
 		<img class="top-image-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/home-banner-bottom.png" alt="" width="" height="" />
 		

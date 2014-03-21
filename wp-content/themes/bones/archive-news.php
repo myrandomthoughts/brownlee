@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<h2>ARCHIVES</h2>
 
 				<div id="inner-content" class="wrap clearfix">
-
+					<h1>ARCHIVES NEWS PAGE</h1>
 						<div id="main" class="eightcol first clearfix" role="main">
 
 						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
