@@ -406,11 +406,21 @@ body {
   font-size: 12px;
   line-height: 150%;
   background: url(../images/bg-fade.png) left 312px repeat-x;
-  background-color: #f4eee7; }
+  background-color: #000; }
 
 .main {
   width: 960px;
   margin: -172px auto 0; }
+
+#modal-form {
+  height: 400px;
+  width: 400px;
+  background: pink;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  z-index: 10000;
+  margin: 0 0 0 -100px; }
 
 /*********************
 LAYOUT & GRID STYLES
