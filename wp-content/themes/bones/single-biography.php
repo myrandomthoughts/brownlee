@@ -3,7 +3,7 @@
 <div class="main">
 	<div class="main-banner">
 
-		<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/about-us-banner.png" alt="" width="" height="" />
+		<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
 
 		<div class="title">
 			<h1><?php the_field('name'); ?><span> - <?php the_field('lawyer_title'); ?></span></h1>
@@ -14,22 +14,34 @@
 	</div><!--end of main banner-->
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
-		<h2>Practice Areas</h2>
-		<?php 
- 
-		$practice_areas = get_field('practice_area_relationship');
-
-		if( $practice_areas ): 
-		 	foreach ($practice_areas as $k => $pid) {
-		 		print '<a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a>';
-		 	}
-		 
-		 endif; 
-		 ?>
-
+		<div class="sidebar">
+			<h4>Practice Areas</h4>
+			<?php 
+	 
+			$practice_areas = get_field('practice_area_relationship'); ?>
+			<ul>
+			<?php
+			if( $practice_areas ): 
+			 	foreach ($practice_areas as $k => $pid) {
+			 		print '<li><a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a></li>';
+			 	}
+			 
+			 endif; 
+			 ?>
+			</ul>
+			<div class="municipal-contact">
+				<h3>Contact our Municipal Helpine:</h3>
+				<ul>
+					<li><?php print get_field('muni_edmonton_ph', 763); ?> (Edmonton)</li>
+					<li><?php print get_field('muni_calgary_ph', 763); ?> (Calgary)</li>
+				</ul>
+				<em>or directly by e-mail to a member of our <a href="">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
+			</div>
+		</div>
 
 	</div>
 	<div class="profile-wrap">
+		
 		<div class="profile">
 			<?php the_post_thumbnail( 'profile-picture', array('class' => 'profile-picture') ); ?>
 
@@ -55,7 +67,7 @@
 		<div class="profile-bar">
 			<ul class="tabs">
 				<?php
-					$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations');
+					$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations', 'Publications'=>'publications', 'Recognition'=>'recognition', 'Community'=>'community');
 					$tabnum = 1;
 
 					foreach ($tab_filed_names as $key => $value) {
@@ -81,10 +93,10 @@
 	<?php
 		
 		$tabnum = 1;
-		$tab_filed_names = array( 'Biography' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations');
+		$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations', 'Publications'=>'publications', 'Recognition'=>'recognition', 'Community'=>'community');
 		foreach ($tab_filed_names as $key => $value) {
 			$tabcont = get_field($value);
-			d($tabcont);
+			
 			if(!empty($tabcont)){
 				print 	'<div id="tab'. $tabnum .'" class="tabContent">
 							<h1>'. $key .'</h1>

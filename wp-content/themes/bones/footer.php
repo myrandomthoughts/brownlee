@@ -7,10 +7,8 @@
 						<div class="input-group">
 							<p>Select a lawyer:</p>
 							<select class="search-input" name="lawyer">
-								<option value="">John Doe</option>
-								<option value="">John Doe</option>
-								<option value="">John Doe</option>
-								<option value="">John Doe</option>
+								<option value=""></option>
+
 							</select>
 						</div>
 						<span>or</span>

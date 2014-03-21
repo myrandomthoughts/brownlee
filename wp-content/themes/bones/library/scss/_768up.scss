@@ -32,6 +32,21 @@ body {
 	margin: -172px auto 0;
 }
 
+.breadcrumbs {
+	margin: 10px 0;
+	font-size: 12px;
+	font-family: Georgia, serif;
+
+	a {
+		color: #a4713b;
+	}
+
+	a:hover {
+		color: #0b3768;
+		text-decoration: underline;
+	}
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -179,6 +194,14 @@ header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 		width: 835px;
 		background: rgba(0,0,0,0.5);
 		/*box-shadow: 0 1px 5px #ddd;*/
+	}
+
+	.top-image {
+		position: absolute;
+		top: 0;
+		left: 30px;
+		background: none;
+		display: block;
 	}
 
 	 .banner-shadow {
@@ -372,7 +395,18 @@ SIDEBARS & ASIDES
 	}
 
 	a {
+		color: #a4713b;
 		text-decoration: none;
+	}
+
+	a:hover {
+		color: #0b3768;
+		text-decoration: underline;
+	}
+
+	li {
+		background: url(../images/bullet.png) left 3px no-repeat;
+		padding: 0 0 6px 18px;
 	}
 
 	.full {
@@ -1164,12 +1198,11 @@ LAWYER MAIN STYLES
 .all-lawyers {
 	float: left;
 	width: 600px;
-	padding: 50px 0 50px;
+	padding: 0 0 50px 40px;
 
 	.single-lawyer {
 		float: left;
 		width: 50%;
-		padding: 0 0 0 40px;
 
 		* {
 			display: inline;
@@ -1534,6 +1567,11 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
 		color: #A4713B;
 	}
 
+	a:hover {
+		color: #0b3768;
+		text-decoration: underline;
+	}
+
 	h2 {
 		font-family: tahoma, sans-serif;
 		color: #386787;
@@ -1570,6 +1608,10 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
 		color: #0b3768;
 		text-decoration: underline;
 	}
+}
+
+.wp-pagenavi {
+		margin: 30px 0;
 }
 
 /*********************

@@ -10,16 +10,25 @@ Template Name: Front Page
 
 	<div class="main-banner">
 
+
 		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
+
 
 		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
 			<div class="banner-shadow"><img src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png"></div>
+			
 			<div class="slider1">
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
-		  		<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/library/images/home-banner.png"></div>
+				<?php if( have_rows('carousel') ):
+				 while ( have_rows('carousel') ) : the_row(); ?>
+		  		<div class="slide">
+		  			  <h1></h1>
+		  			<img src="<?php the_sub_field('carousel_image'); ?>">
+		  			<a href="<?php the_sub_field('carousel_link'); ?>"><?php the_sub_field('carousel_text'); ?></a>
+		  		</div>
+		  		 <?php endwhile;
+				endif; ?>
 			</div>
 		</div>
 
@@ -80,7 +89,7 @@ Template Name: Front Page
 
 		<div class="sidebar-entry">
 			<h3>News</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1', 'order' 	=> 'ASC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">
@@ -97,7 +106,7 @@ Template Name: Front Page
 
 		<div class="sidebar-entry">
 			<h3>Events</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1', 'order' => 'ASC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">	
@@ -114,7 +123,7 @@ Template Name: Front Page
 
 		<div class="sidebar-entry">
 			<h3>E-Bulletins</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'e-bulletin', 'posts_per_page' => '1') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'e-bulletin', 'posts_per_page' => '1', 'order' => 'ASC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">	

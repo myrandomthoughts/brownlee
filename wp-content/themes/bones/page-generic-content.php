@@ -9,7 +9,9 @@ Template Name: Generic Content
 			<div class="main">
 
 				<div class="main-banner">
-				
+
+					<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
+
 					<div class="title">
 						<h1><?php the_title(); ?></h1>
 					</div>
@@ -24,7 +26,9 @@ Template Name: Generic Content
 				</div>
 
 				<div class="main-content">
+
 					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>  
+					
 				<?php if( have_rows('new_paragraph') ):
 				 
 				    while ( have_rows('new_paragraph') ) : the_row(); ?>

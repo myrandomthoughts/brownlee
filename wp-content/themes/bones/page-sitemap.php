@@ -10,7 +10,7 @@ Template Name: Sitemap
 
 				<div class="main-banner">
 
-					<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/about-us-banner.png" alt="" width="" height="" />
+					<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
 				
 					<div class="title">
 						<h1><?php the_title(); ?></h1>
@@ -26,6 +26,8 @@ Template Name: Sitemap
 				</div>
 
 				<div class="main-content">
+				
+					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
 				
 				 	<h1><?php the_title(); ?>s</h1>
 				    <ul>

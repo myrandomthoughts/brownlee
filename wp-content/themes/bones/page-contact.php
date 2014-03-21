@@ -27,6 +27,9 @@ Template Name: Contact
 				</div>
 
 			<div class="contacts">
+
+				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
+				
 				<div class="contacts-wrap">
 					<h2>Edmonton Office</h2>
 					<img src="<?php bloginfo('template_directory'); ?>/library/images/contact-ed.png" alt="" width="" height="" />

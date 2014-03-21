@@ -10,7 +10,7 @@ Template Name:Ebulletin listings
 
 				<div class="main-banner">
 
-					<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/about-us-banner.png" alt="" width="" height="" />
+					<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
 				
 					<div class="title">
 						<h1><?php the_title(); ?></h1>
@@ -53,7 +53,8 @@ Template Name:Ebulletin listings
 						<div class="nee-item">
 							<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>
 
-							<p><?php the_excerpt(); ?></p>
+							<?php the_excerpt(); ?>
+
 							<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
 						</div>
 

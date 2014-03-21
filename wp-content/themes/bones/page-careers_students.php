@@ -27,6 +27,9 @@ Template Name: Careers--Students
 				</div>
 
 			<div class="main-content">
+
+				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
+				
 				<h1><?php the_field('top_title'); ?></h1>
 				<?php the_field('top_paragraph'); ?>
 				<ul>

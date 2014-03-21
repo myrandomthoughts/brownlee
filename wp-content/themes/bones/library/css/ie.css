@@ -412,6 +412,16 @@ body {
   width: 960px;
   margin: -172px auto 0; }
 
+.breadcrumbs {
+  margin: 10px 0;
+  font-size: 12px;
+  font-family: Georgia, serif; }
+  .breadcrumbs a {
+    color: #a4713b; }
+  .breadcrumbs a:hover {
+    color: #0b3768;
+    text-decoration: underline; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -533,6 +543,12 @@ header .search:hover #searchform {
     width: 835px;
     background: rgba(0, 0, 0, 0.5);
     /*box-shadow: 0 1px 5px #ddd;*/ }
+  .main-banner .top-image {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: none;
+    display: block; }
   .main-banner .banner-shadow {
     position: absolute;
     top: 0;
@@ -675,7 +691,14 @@ SIDEBARS & ASIDES
     padding: 0 0 7px;
     border-bottom: 7px solid #E7E0D8; }
   .sidebar a {
+    color: #a4713b;
     text-decoration: none; }
+  .sidebar a:hover {
+    color: #0b3768;
+    text-decoration: underline; }
+  .sidebar li {
+    background: url(../images/bullet.png) left 3px no-repeat;
+    padding: 0 0 6px 18px; }
   .sidebar .full {
     display: block;
     font-family: Arial, sans-serif;
@@ -1252,11 +1275,10 @@ LAWYER MAIN STYLES
 .all-lawyers {
   float: left;
   width: 600px;
-  padding: 50px 0 50px; }
+  padding: 0 0 50px 40px; }
   .all-lawyers .single-lawyer {
     float: left;
-    width: 50%;
-    padding: 0 0 0 40px; }
+    width: 50%; }
     .all-lawyers .single-lawyer * {
       display: inline; }
     .all-lawyers .single-lawyer img {
@@ -1499,6 +1521,9 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
   .nee-wrap a {
     text-decoration: none;
     color: #A4713B; }
+  .nee-wrap a:hover {
+    color: #0b3768;
+    text-decoration: underline; }
   .nee-wrap h2 {
     font-family: tahoma, sans-serif;
     color: #386787;
@@ -1526,6 +1551,9 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
   .nee-wrap #top:hover {
     color: #0b3768;
     text-decoration: underline; }
+
+.wp-pagenavi {
+  margin: 30px 0; }
 
 /*********************
 CAREERS STYLES
