@@ -37,6 +37,6 @@
 			<li><?php print get_field('muni_edmonton_ph', 763); ?> (Edmonton)</li>
 			<li><?php print get_field('muni_calgary_ph', 763); ?> (Calgary)</li>
 		</ul>
-		<em>or directly by e-mail to a member of our <a href="">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
+		<em>or directly by e-mail to a member of our <a href="<?php print get_page_link(119); ?>">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
 	</div>
 </div><!--end of sidebar-->

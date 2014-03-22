@@ -64,7 +64,7 @@ Template Name: Front Page
 					 	<div class="flyout-wrap">
 					 		<div class="flyout-arrow"></div>
 						<h2>Edmonton</h2>
-						<a id="map" href="">Map</a>
+						<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
 						<p>
 							<?php the_field('edmonton_address'); ?>
 							<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
@@ -81,7 +81,7 @@ Template Name: Front Page
 					 <div class="flyout-wrap">
 					 	<div class="flyout-arrow"></div>
 					<h2>Calgary</h2>
-					<a id="map" href="">Map</a>
+					<a id="map" href="<?php print get_page_link(641); ?>">Map</a>
 					<p>
 						<?php the_field('calgary_address'); ?>
 						<a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a><br>
@@ -105,7 +105,7 @@ Template Name: Front Page
 			</div>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-			<a class="view" href="<?php bloginfo('url'); ?>/?page_id=91">View News</a>
+			<a class="view" href="<?php print get_page_link(91); ?>">View News</a>
 		</div><!--end of sidebar entry-->
 
 
@@ -122,7 +122,7 @@ Template Name: Front Page
 			</div>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-			<a class="view" href="<?php bloginfo('url'); ?>/?page_id=193">View Events</a>
+			<a class="view" href="<?php print get_page_link(193); ?>">View Events</a>
 		</div><!--end of sidebar entry-->
 
 
@@ -141,7 +141,7 @@ Template Name: Front Page
 			</div>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-			<a class="view" href="<?php bloginfo('url'); ?>/?page_id=117">View E-Bulletins</a>
+			<a class="view" href="<?php print get_page_link(117); ?>">View E-Bulletins</a>
 		</div><!--end of sidebar entry-->
 	</div><!--end of homepage-->
 

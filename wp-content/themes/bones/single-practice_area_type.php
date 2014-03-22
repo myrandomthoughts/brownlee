@@ -2,29 +2,21 @@
 
 			<div class="main">
 
-				<div class="main-banner">
-
-					<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
-				
-					<div class="title">
-						<h1><?php the_title(); ?></h1>
-					</div>
-
-					<?php get_template_part( 'part-side-module' ); ?>
-
-				</div><!--end of main banner-->
+				<?php get_template_part( 'part-main-banner-single' ); ?>
 
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
 
 					<div class="sidebar">
-						<h4>Related Practice Areas</h4>
-						<?php
-						$practice_areas = get_field('practice_area'); ?>
+						<h4>Practice Team</h4>
+						<?php 
+				 
+						$practice_team = get_field('practice_area_relationship'); ?>
+						
 						<ul>
-						<?php
-						if( $practice_areas ): 
-						 	foreach ($practice_areas as $k => $pid) {
+						<?php 
+						if( $practice_team ): 
+						 	foreach ($practice_team as $k => $pid) {
 						 		print '<li><a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a></li>';
 						 	}
 						 
@@ -32,15 +24,15 @@
 						 ?>
 						</ul>
 
-						<h4>Practice Team</h4>
-						<?php 
-				 
-						$practice_team = get_field('practice_area_relationship'); ?>
+						<h4>Related Practice Areas</h4>
+						<?php
+
+						$practice_areas = get_field('practice_area'); ?>
 
 						<ul>
-						<?php 
-						if( $practice_team ): 
-						 	foreach ($practice_team as $k => $pid) {
+						<?php
+						if( $practice_areas ): 
+						 	foreach ($practice_areas as $k => $pid) {
 						 		print '<li><a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a></li>';
 						 	}
 						 

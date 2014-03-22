@@ -1,10 +1,29 @@
 <?php get_header(); ?>
 
-			<div id="content">
+			<div class="main">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div class="main-banner">
 
-					<div id="main" class="eightcol first clearfix" role="main">
+					<img class="banner-shadow-other" src="<?php bloginfo('template_directory'); ?>/library/images/banner-shadow.png" alt="" width="936" height="" />
+
+					<img class="top-image" src="<?php bloginfo('template_directory'); ?>/library/images/banner-3.png" alt="Top Banner" width="894" height="" />
+
+					<div class="title">
+						<h1>Search Results For: <?php echo esc_attr(get_search_query()); ?></h1>
+					</div>
+
+					<img class="title-bg" src="<?php bloginfo('template_directory'); ?>/library/images/title-bg.png" alt="" width="" height="" />
+
+					<?php get_template_part( 'part-side-module' ); ?>
+
+				</div><!--end of main banner-->	
+
+				<div class="side-panel">
+					<?php bones_main_nav(); ?>
+					<?php get_template_part( 'news-events' ); ?>
+				</div>
+
+				<div class="main-content">
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -61,11 +80,7 @@
 							<?php endif; ?>
 
 						</div>
-
-							<?php get_sidebar(); ?>
-
-					</div>
-
-			</div>
+				</div>
+			</div><!--end of main-->
 
 <?php get_footer(); ?>

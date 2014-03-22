@@ -196,6 +196,9 @@ function bones_wpsearch($form) {
 	</form>';
 	return $form;
 } // don't remove this bracket!
+
+//***Breadcrumbs***
+
 function dimox_breadcrumbs() {  
   
   /* === OPTIONS === */  

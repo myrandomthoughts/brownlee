@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Smith, Rodney A.
+FN:Rodney A.
+ORG:Brownlee LLP
+TITLE:Associate
+TEL;WORK;VOICE:403.260.1471
+TEL;HOME;VOICE:
+TEL;CELL;VOICE:
+TEL;WORK;FAX:
+ADR;WORK:;Brownlee LLP;7th Floor, 396 - 11th Avenue S.W.;Calgary;AB;T2R 0C5;Canada
+URL;WORK:http://www.brownleelaw.com
+EMAIL;INTERNET:rsmith@brownleelaw.com
+END:VCARD
+

@@ -552,8 +552,12 @@ header .search:hover #searchform {
   .main-banner .banner-shadow {
     position: absolute;
     top: 0;
-    left: 10;
+    left: -3px;
     z-index: -10; }
+  .main-banner .banner-shadow-other {
+    position: absolute;
+    top: -8px;
+    left: 7px; }
   .main-banner #top-image {
     position: absolute;
     top: 0;
@@ -586,6 +590,11 @@ header .search:hover #searchform {
     border-bottom: 2px solid #AE445D; }
     .main-banner .title h1 span {
       color: #d6a0ad; }
+  .main-banner .title-bg {
+    position: absolute;
+    bottom: 0;
+    left: 22px;
+    z-index: -1; }
   .main-banner .side-module {
     position: absolute;
     display: block;
@@ -655,10 +664,11 @@ NAVIGATION STYLES
     padding: 0;
     left: 20px; }
     .nav li:hover .sub-menu ul li a::before {
-      content: "-";
+      position: absolute;
+      content: url("../images/nav-arrow.png");
       color: #a4713b;
-      padding: 0 4px 0 0;
-      font-size: 14px; }
+      left: 20px;
+      bottom: 3px; }
 
 .sub-menu li a {
   background: none;
@@ -1200,6 +1210,16 @@ LAWYER PROFILE STYLES
       top: 14px;
       border: none;
       margin: 0; }
+    .profile-wrap .profile .vcard {
+      position: absolute;
+      border: none;
+      margin: 0;
+      display: block;
+      width: 124px;
+      height: 64px;
+      background: url(../images/vcard.png) top left no-repeat;
+      right: -13px;
+      bottom: 18px; }
     .profile-wrap .profile .profile-picture {
       float: left;
       border: 8px solid #C0B6AA;
@@ -1280,7 +1300,7 @@ LAWYER MAIN STYLES
     float: left;
     width: 50%; }
     .all-lawyers .single-lawyer * {
-      display: inline; }
+      display: inline-block; }
     .all-lawyers .single-lawyer img {
       border: 3px solid #C0B6AA; }
     .all-lawyers .single-lawyer a {
@@ -1440,7 +1460,8 @@ NEWS AND EVENTS STYLES
 *********************/
 .news-events {
   float: left;
-  width: 690px; }
+  width: 650px;
+  margin: 0 0 0 30px; }
   .news-events a {
     text-decoration: none; }
   .news-events h3 {
@@ -1473,7 +1494,7 @@ NEWS AND EVENTS STYLES
   .news-events .news-list {
     float: left;
     width: 280px;
-    margin: 30px; }
+    margin: 30px 0; }
     .news-events .news-list .news-item {
       border-bottom: 2px solid #D6CDC3; }
       .news-events .news-list .news-item p {
@@ -1570,6 +1591,15 @@ CAREERS STYLES
   background: #A4713B; }
 .careers .full:hover {
   color: #fff; }
+
+/*********************
+CAREERS STYLES
+*********************/
+.article-header {
+  background: none;
+  text-align: left;
+  height: none;
+  border-bottom: 2px solid #E7E0D8; }
 
 /******************************************************************
 Site Name: 

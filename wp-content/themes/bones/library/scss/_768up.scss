@@ -207,8 +207,14 @@ header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 	 .banner-shadow {
 	 	position: absolute;
 	 	top: 0;
-	 	left: 10;
+	 	left: -3px;
 	 	z-index: -10;
+	 }
+
+	 .banner-shadow-other {
+	 	position: absolute;
+	 	top: -8px;
+	 	left: 7px;
 	 }
 
 	#top-image {
@@ -251,6 +257,13 @@ header .search:hover #searchform {top:30px; opacity:1; overflow: visible; }
 		span {
 			color: #d6a0ad;
 		}
+	}
+
+	.title-bg {
+		position: absolute;
+		bottom: 0;
+		left: 22px;
+		z-index: -1;
 	}
 
 	.side-module {
@@ -346,10 +359,12 @@ NAVIGATION STYLES
 				left: 20px;
 
 				li a::before {
-					content: "-";
+					position: absolute;
+					content: url('../images/nav-arrow.png');
 					color: #a4713b;
-					padding: 0 4px 0 0;
-					font-size: 14px;
+					left: 20px;
+					bottom: 3px;
+					
 				}
 			}
 		}
@@ -1094,6 +1109,18 @@ LAWYER PROFILE STYLES
 			margin: 0;
 		}
 
+		.vcard {
+			position: absolute;
+			border: none;
+			margin: 0;
+			display: block;
+			width: 124px;
+			height: 64px;
+			background: url(../images/vcard.png) top left no-repeat;
+			right: -13px;
+			bottom: 18px;
+		}
+
 		.profile-picture {
 			float: left;
 			border: 8px solid #C0B6AA;
@@ -1205,7 +1232,7 @@ LAWYER MAIN STYLES
 		width: 50%;
 
 		* {
-			display: inline;
+			display: inline-block;
 		}
 
 		img {
@@ -1446,7 +1473,8 @@ NEWS AND EVENTS STYLES
 
 .news-events {
 	float: left;
-	width: 690px;
+	width: 650px;
+	margin: 0 0 0 30px;
 
 	a {
 		text-decoration: none;
@@ -1494,7 +1522,7 @@ NEWS AND EVENTS STYLES
 	.news-list {
 		float: left;
 		width: 280px;
-		margin: 30px;
+		margin: 30px 0;
 
 		.news-item {
 			border-bottom: 2px solid #D6CDC3;
@@ -1635,4 +1663,15 @@ CAREERS STYLES
 	.full:hover {
 			color: #fff;	
 		}
+}
+
+/*********************
+CAREERS STYLES
+*********************/
+
+.article-header {
+	background: none;
+	text-align: left;
+	height: none;
+	border-bottom: 2px solid #E7E0D8;
 }

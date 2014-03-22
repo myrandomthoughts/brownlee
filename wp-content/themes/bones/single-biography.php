@@ -1,17 +1,9 @@
 <?php get_header(); ?>
 
 <div class="main">
-	<div class="main-banner">
+	
+	<?php get_template_part( 'part-main-banner-single' ); ?>
 
-		<img class="top-image" src="<?php the_field('top_banner'); ?>" alt="Top Banner" width="894" height="" />
-
-		<div class="title">
-			<h1><?php the_field('name'); ?><span> - <?php the_field('lawyer_title'); ?></span></h1>
-		</div>
-
-		<?php get_template_part( 'part-side-module' ); ?>
-		
-	</div><!--end of main banner-->
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
 		<div class="sidebar">
@@ -29,13 +21,14 @@
 			 endif; 
 			 ?>
 			</ul>
+
 			<div class="municipal-contact">
 				<h3>Contact our Municipal Helpine:</h3>
 				<ul>
 					<li><?php print get_field('muni_edmonton_ph', 763); ?> (Edmonton)</li>
 					<li><?php print get_field('muni_calgary_ph', 763); ?> (Calgary)</li>
 				</ul>
-				<em>or directly by e-mail to a member of our <a href="">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
+				<em>or directly by e-mail to a member of our <a href="<?php print get_page_link(119); ?>">Municipal Team</a> dedicated to serving municipalities and their related public entities.</em>
 			</div>
 		</div>
 
@@ -50,6 +43,8 @@
 			 <a class="linkedin" href="<?php the_field('linkedin_link'); ?>"><img src="<?php bloginfo('template_directory'); ?>/library/images/linkedin.png" alt="" width="" height="" /> </a>
 
 			<?php endif; ?>
+
+			<a href="<?php  ?>"><div class="vcard"></div></a>
 
 			<dl>
 				<dt>Location:</dt><dd><?php the_field('location'); ?></dd>

@@ -32,7 +32,7 @@
 							<select class="search-input" name="practice">
 								<option value="">All</option>
 								<option value="">Aboriginal</option>
-								<option value="">Commercial</option>
+								<option value="">Administrative Law</option>
 							</select>
 							<input class="search-button" type="submit" value="Go">
 						</div>			
@@ -52,58 +52,57 @@
 						<ul class="sm-top-nav">
 							<li>Copyright &copy; 2014 Brownlee LLP</li>
 							<li><a href="home_url();">Home</a></li>
-							<!-- <li><a href="<?php //bloginfo('url'); ?>/?page_id=193">Contact</a></li> -->
-							<li><a href="<?php print get_page_link(193); ?>">Contact</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=119">Login</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=200">Payment</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=203">Privacy Policy</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=207">Terms Of Use</a></li>
-							<li><a href="<?php bloginfo('url'); ?>?page_id=524">Site Map</a></li>
+							<li><a href="<?php print get_page_link(119); ?>">Contact</a></li>
+							<li><a href="<?php print get_page_link(136); ?>">Login</a></li>
+							<li><a href="<?php print get_page_link(200); ?>">Payment</a></li>
+							<li><a href="<?php print get_page_link(203); ?>">Privacy Policy</a></li>
+							<li><a href="<?php print get_page_link(207); ?>">Terms Of Use</a></li>
+							<li><a href="<?php print get_page_link(524); ?>">Site Map</a></li>
 						</ul>
 
 						<div class="sm-column">
 							<h4>About Us</h4>
 							<ul>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=11">Firm Profile</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=25">Community Involvement</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=29">History</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=81">Practice Areas</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=31">Municipal Helpline</a></li>
+								<li><a href="<?php print get_page_link(11); ?>">Firm Profile</a></li>
+								<li><a href="<<?php print get_page_link(25); ?>">Community Involvement</a></li>
+								<li><a href="<?php print get_page_link(29); ?>">History</a></li>
+								<li><a href="<?php print get_page_link(81); ?>">Practice Areas</a></li>
+								<li><a href="<?php print get_page_link(31); ?>">Municipal Helpline</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>People</h4>
 							<ul>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=48">Lawyers</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=111">Students</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=46">Administration</a></li>
+								<li><a href="<?php print get_page_link(48); ?>">Lawyers</a></li>
+								<li><a href="<?php print get_page_link(111); ?>">Students</a></li>
+								<li><a href="<?php print get_page_link(46); ?>">Administration</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>News &amp; Events</h4>
 							<ul>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=91">News</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=193">Events &amp; Seminars</a></li>
+								<li><a href="<?php print get_page_link(91); ?>">News</a></li>
+								<li><a href="<?php print get_page_link(193); ?>">Events &amp; Seminars</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>Resources</h4>
 							<ul>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=117">E-Bulletin</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=214">Articles &amp; Publications</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=217">Links</a></li>
+								<li><a href="<?php print get_page_link(117); ?>">E-Bulletin</a></li>
+								<li><a href="<?php print get_page_link(214); ?>">Articles &amp; Publications</a></li>
+								<li><a href="<?php print get_page_link(217); ?>">Links</a></li>
 							</ul>
 						</div>
 
 						<div class="sm-column">
 							<h4>Careers</h4>
 							<ul>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=235">Students</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=276">Lawyers</a></li>
-								<li><a href="<?php bloginfo('url'); ?>?page_id=279">Staff</a></li>
+								<li><a href="<?php print get_page_link(235); ?>">Students</a></li>
+								<li><a href="<?php print get_page_link(276); ?>">Lawyers</a></li>
+								<li><a href="<?php print get_page_link(279); ?>">Staff</a></li>
 							</ul>
 						</div>
 					</div>
