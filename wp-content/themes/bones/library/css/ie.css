@@ -9,11 +9,11 @@ Syntax error: Invalid CSS after "}": expected selector or at-rule, was "<<<<<<< 
 33: }
 34: 
 35: <<<<<<< HEAD
-36: .breadcrumbs {
-37: 	margin: 10px 0;
-38: 	font-size: 12px;
-39: 	font-family: Georgia, serif;
-40: 
+36: <<<<<<< HEAD
+37: .breadcrumbs {
+38: 	margin: 10px 0;
+39: 	font-size: 12px;
+40: 	font-family: Georgia, serif;
 
 Backtrace:
 scss/_768up.scss:35
@@ -55,4 +55,4 @@ C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/ada
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected selector or at-rule, was \"<<<<<<< HEAD\"\A         on line 35 of scss/_768up.scss\A         from line 26 of scss/ie.scss\A \A 30: .main {\A 31: 	width: 960px;\A 32: 	margin: -172px auto 0;\A 33: }\A 34: \A 35: <<<<<<< HEAD\A 36: .breadcrumbs {\A 37: 	margin: 10px 0;\A 38: 	font-size: 12px;\A 39: 	font-family: Georgia, serif;\A 40: "; }
+  content: "Syntax error: Invalid CSS after \"}\": expected selector or at-rule, was \"<<<<<<< HEAD\"\A         on line 35 of scss/_768up.scss\A         from line 26 of scss/ie.scss\A \A 30: .main {\A 31: 	width: 960px;\A 32: 	margin: -172px auto 0;\A 33: }\A 34: \A 35: <<<<<<< HEAD\A 36: <<<<<<< HEAD\A 37: .breadcrumbs {\A 38: 	margin: 10px 0;\A 39: 	font-size: 12px;\A 40: 	font-family: Georgia, serif;"; }
