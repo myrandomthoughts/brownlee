@@ -40,11 +40,11 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div id="modal-form">
+		<!-- <div id="modal-form">
 			<form>
 				
 			</form>
-		</div>
+		</div> -->
 
 		<div id="container">
 			<header class="header" role="banner">

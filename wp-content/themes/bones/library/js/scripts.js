@@ -72,6 +72,14 @@ jQuery(document).ready(function($) {
 }); /* end of as page load scripts */
 
 
+jQuery( "#email-modal" ).click(function() {
+  jQuery( "#modal-form" ).addClass( "modal-on" );
+
+
+});
+
+
+
 /*! A fix for the iOS orientationchange zoom bug.
  Script by @scottjehl, rebound by @wilto.
  MIT License.
@@ -140,8 +148,6 @@ jQuery(document).ready(function() {
     });
  
 });
-
-
 
 
 
