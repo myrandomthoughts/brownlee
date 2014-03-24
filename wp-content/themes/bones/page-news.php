@@ -20,8 +20,6 @@ Template Name: News
 				<div class="nee-wrap">
 					<?php the_field('text_entry'); ?>
 
-					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>  
-
 					<div class="nee-list">
 						
 						<?php 

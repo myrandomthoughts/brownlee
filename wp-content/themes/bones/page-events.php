@@ -23,7 +23,7 @@ Template Name: Events
 					<div class="nee-list">
 						<?php 
 						$paged = get_query_var('paged');
-						$loop = new WP_Query( array( 'post_type' => 'events', 'paged' => $paged, 'posts_per_page' => '6') );
+						$loop = new WP_Query( array( 'post_type' => 'events', 'orderby' => 'date', 'order' => 'DESC', 'post_status'=>'publish', 'paged' => $paged, 'posts_per_page' => '6') );
 						while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<div class="nee-item">
 							<a href="<?php the_permalink(); ?>"><h2><?php the_field( 'ne_title' ); ?></h2></a>

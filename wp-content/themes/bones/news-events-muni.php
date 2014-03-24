@@ -12,7 +12,7 @@
 		</div>
 
 		<?php endwhile; wp_reset_postdata(); ?>
-		<a class="full-link" href="<?php bloginfo('url'); ?>/?page_id=91">View News</a>
+		<a class="full-link" href="<?php print get_page_link(91); ?>">View News</a>
 	</div>
 
 	<div class="events-list">
@@ -28,7 +28,7 @@
 		</div>
 
 		<?php endwhile; wp_reset_postdata(); ?>
-		<a class="full-link" href="<?php bloginfo('url'); ?>/?page_id=193">View Events</a>
+		<a class="full-link" href="<?php print get_page_link(193); ?>">View Events</a>
 	</div>
 
 	<div class="municipal-contact">

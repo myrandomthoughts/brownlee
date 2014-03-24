@@ -23,7 +23,7 @@ body {
 	font-size: 12px;
 	line-height: 150%;
 	background: url(../images/bg-fade.png) left 312px repeat-x;
-	background-color: #000;
+	background-color: #f4eee7;
 }
  
 
@@ -32,15 +32,14 @@ body {
 	margin: -172px auto 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .breadcrumbs {
 	margin: 10px 0;
-	font-size: 12px;
+	font-size: 11px;
 	font-family: Georgia, serif;
 
 	a {
 		color: #a4713b;
+		text-decoration: none;
 	}
 
 	a:hover {
@@ -48,16 +47,6 @@ body {
 		text-decoration: underline;
 	}
 }
-=======
-#modal-form {height: 400px; width:400px; background: pink; position: absolute; top:400px; left:50%; z-index:10000; margin:0 0 0 -100px;}
-
-.modal-on {}
->>>>>>> 2b7ffa8edf990ce7dbb00e3a75a6457e9edd5e9f
-=======
-#modal-form {height: 400px; width:400px; background: pink; position: absolute; top:400px; left:50%; z-index:10000; margin:0 0 0 -100px;}
-
-.modal-on {}
->>>>>>> 2b7ffa8edf990ce7dbb00e3a75a6457e9edd5e9f
 
 /*********************
 LAYOUT & GRID STYLES
@@ -860,7 +849,8 @@ HOME STYLES
 		p span {
 			text-align: left;
 		}
-	.flyout-arrow {height:20px; width:20px; background: url(../images/arrow.png) 0px no-repeat; position: absolute; top:80px; left:-34px;}
+		
+	.flyout-arrow {height:20px; width:20px; background: url(../images/arrow.png) 0px no-repeat; position: absolute; top:0px; left:-34px;}
 	}
 
 	a {
@@ -1239,6 +1229,10 @@ LAWYER MAIN STYLES
 	width: 600px;
 	padding: 0 0 50px 40px;
 
+	.breadcrumbs {
+		margin: 10px 0 25px;
+	}
+
 	.single-lawyer {
 		float: left;
 		width: 50%;
@@ -1268,6 +1262,11 @@ PRACTICE AREAS STYLES
 *********************/
 
 .practice-areas {
+
+	ul {
+		margin: 25px 0 0 0;
+	}
+
 	li {
 		background: url(../images/bullet.png) left top no-repeat;
 
@@ -1293,6 +1292,10 @@ MUNICIPAL HELPLINE STYLES
 	float: left;
 	margin: 0 0 0 30px;
 	width: 640px;
+
+	.breadcrumbs {
+		margin: 10px 0 25px;
+	}
 
 	h1 {
 	font-family: Tahoma, sans-serif;
@@ -1534,7 +1537,7 @@ NEWS AND EVENTS STYLES
 	.news-list {
 		float: left;
 		width: 280px;
-		margin: 30px 0;
+		margin: 0;
 
 		.news-item {
 			border-bottom: 2px solid #D6CDC3;
@@ -1548,7 +1551,7 @@ NEWS AND EVENTS STYLES
 	.events-list {
 		float: left;
 		width: 280px;
-		margin: 30px;
+		margin: 0 0 0 30px;
 
 		.events-item {
 			border-bottom: 2px solid #D6CDC3;
@@ -1601,6 +1604,10 @@ PAGE NEWS/EVENTS/EBULLETIN STYLES
 	float: left;
 	width: 620px;
 	margin: 0 0 0 30px;
+
+	.breadcrumbs {
+		margin: 10px 0 25px;
+	}
 
 	a {
 		text-decoration: none;
@@ -1659,6 +1666,9 @@ CAREERS STYLES
 *********************/
 
 .careers {
+	.breadcrumbs {
+		margin: 10px 0 25px;
+	}
 
 	.full{
 		display: block;

@@ -10,13 +10,6 @@ Template Name: Front Page
 
 	<div class="main-banner">
 
-<<<<<<< HEAD
-
-		<h2 id="banner-announcement"><?php the_field('banner_announcement'); ?></h2>
-
-
-=======
->>>>>>> 46359660667ca5b74232f8c2e8d9574e39e6865d
 		<img class="banner-shadow" src="<?php bloginfo('template_directory'); ?>/library/images/front-banner-shadow.png" alt="" width="" height="" />
 
 		<div id="top-image">
@@ -63,13 +56,13 @@ Template Name: Front Page
 
 					 	<div class="flyout-wrap">
 					 		<div class="flyout-arrow"></div>
-						<h2>Edmonton</h2>
-						<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
-						<p>
-							<?php the_field('edmonton_address'); ?>
-							<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
-							<a href="">View Full Contact Details</a><br>
-						</p>
+							<h2>Edmonton</h2>
+							<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
+							<p>
+									<?php the_field('edmonton_address'); ?>
+									<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
+								<a href="">View Full Contact Details</a><br>
+							</p>
 					</div>
 				</div>
 			</div><!--end of Edmonton Office-->	
@@ -78,8 +71,8 @@ Template Name: Front Page
 				<h3>Calgary</h3>
 
 			<div class="flyout flyout-right">
-					 <div class="flyout-wrap">
-					 	<div class="flyout-arrow"></div>
+				 <div class="flyout-wrap">
+				 	<div class="flyout-arrow"></div>
 					<h2>Calgary</h2>
 					<a id="map" href="<?php print get_page_link(641); ?>">Map</a>
 					<p>
@@ -87,14 +80,14 @@ Template Name: Front Page
 						<a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a><br>
 						<a href="">View Full Contact Details</a><br>
 					</p>
-				</div>
+			</div>
 			</div> <!--end of Calgary Office-->
 		</div><!--end of locations-->
 		</div>
 
 		<div class="sidebar-entry">
 			<h3>News</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1', 'order' 	=> 'ASC', 'orderby' => 'date') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1', 'order' 	=> 'DESC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">
@@ -111,7 +104,7 @@ Template Name: Front Page
 
 		<div class="sidebar-entry">
 			<h3>Events</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1', 'order' => 'ASC', 'orderby' => 'date') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1', 'order' => 'DESC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">	
@@ -128,7 +121,7 @@ Template Name: Front Page
 
 		<div class="sidebar-entry">
 			<h3>E-Bulletins</h3>
-			<?php $loop = new WP_Query( array( 'post_type' => 'e-bulletin', 'posts_per_page' => '1', 'order' => 'ASC', 'orderby' => 'date') );
+			<?php $loop = new WP_Query( array( 'post_type' => 'e-bulletin', 'posts_per_page' => '1', 'order' => 'DESC', 'orderby' => 'date') );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<span class="post-time"><?php the_time('F j, Y'); ?></span>
 			<div class="news-item">	
