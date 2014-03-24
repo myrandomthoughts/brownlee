@@ -1755,7 +1755,7 @@ you can add resource intensive styles.
       background-color: #800F29;
       bottom: 10px;
       right: 0; }
-      .main-banner .side-module a {
+      .main-banner .side-module a, .main-banner .side-module div {
         display: block;
         height: 40px;
         width: 40px;

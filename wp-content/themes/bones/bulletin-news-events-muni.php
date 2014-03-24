@@ -5,7 +5,7 @@
 
 	<div class="news-list">
 		<h4>News</h4>
-		<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1') );
+		<?php $loop = new WP_Query( array( 'post_type' => 'news', 'posts_per_page' => '1', 'order' => 'DESC', 'orderby' => 'date') );
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<span class="post-time"><?php the_time('F j, Y'); ?></span>
 		<div class="news-item">
@@ -22,7 +22,7 @@
 	
 	<div class="events-list">
 		<h4>Events</h4>
-		<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1') );
+		<?php $loop = new WP_Query( array( 'post_type' => 'events', 'posts_per_page' => '1', 'order' => 'DESC', 'orderby' => 'date') );
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<span class="post-time"><?php the_time('F j, Y'); ?></span>
 		<div class="events-item">	
