@@ -54,10 +54,11 @@ Template Name: Lawyers Search
 					<?php get_template_part( 'bulletin-news-events-muni' ); ?>
 				</div>
 
-			<div class="all-lawyers">
-				<h1>Search Results</h1>
+			<div class="all-lawyers main-content">
+
 				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
-				
+
+				<h1>Search Results</h1>
 				<?php $loop = new WP_Query($args);
 				
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>

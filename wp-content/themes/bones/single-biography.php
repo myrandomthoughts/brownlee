@@ -44,7 +44,7 @@
 
 			<?php endif; ?>
 
-			<a href="<?php  ?>"><div class="vcard"></div></a>
+			<a href="<?php home_url(); the_field('vcard'); ?>"><div class="vcard"></div></a>
 
 			<dl>
 				<dt>Location:</dt><dd><?php the_field('location'); ?></dd>
