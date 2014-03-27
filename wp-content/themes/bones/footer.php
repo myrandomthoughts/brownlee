@@ -6,8 +6,23 @@
 					<form action="" method="">
 						<div class="input-group">
 							<p>Select a lawyer:</p>
-							<select class="search-input" name="lawyer">
-								<option value=""></option>
+							<?php wp_reset_query();
+								$args = array( 	'post_type' => 'biography',
+													'order' 	=> 'ASC',
+												   	'orderby'   => 'meta_value', 
+												   	'meta_key' 	=> 'name'
+												);
+									$lawyers = new WP_Query($args);
+
+									?>
+							<select class="search-input" id="lawyer-name-search-select" name="lawyer">
+								
+								<?php
+								foreach ($lawyers as $key => $lawyer) {
+										print '<option value="'.get_page_link($lawyer->ID).'">'.get_the_title($lawyer->ID).'</option>';
+									}
+								?>
+								
 
 							</select>
 						</div>
@@ -22,8 +37,12 @@
 							<p>Location:</p>
 							<select class="search-input" name="location">
 								<option value="">All</option>
-								<option value="">Edmonton</option>
-								<option value="">Calgary</option>
+								<?php 
+									$loop = new WP_Query( array( 'post_type' => 'practice_area_type', 'order' => 'ASC', 'orderby' => 'title') );
+									foreach ($loop as $key => $pa) {
+										print '<option value="'. $pa->ID .'">'.get_the_title($pa->ID).'</option>';
+									}
+								?>
 							</select>
 						</div>
 
@@ -31,8 +50,12 @@
 							<p>Practice:</p>
 							<select class="search-input" name="practice">
 								<option value="">All</option>
-								<option value="">Aboriginal</option>
-								<option value="">Administrative Law</option>
+								<?php 
+									$loop = new WP_Query( array( 'post_type' => 'practice_area_type', 'order' => 'ASC', 'orderby' => 'title') );
+									foreach ($loop as $key => $pa) {
+										print '<option value="'. $pa->ID .'">'.get_the_title($pa->ID).'</option>';
+									}
+								?>
 							</select>
 							<input class="search-button" type="submit" value="Go">
 						</div>			

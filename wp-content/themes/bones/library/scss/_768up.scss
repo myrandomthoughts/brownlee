@@ -26,6 +26,13 @@ body {
 	background-color: #f4eee7;
 }
  
+#modal-form {height: 459px; width:468px; background: #f4eee7; position: absolute; top:400px; left:40%; z-index:10000; margin:0 0 0 -100px; border: 2px solid black; display:none;}
+ 
+ .modal-on {display:block;}
+ 
+#modal-wrap {
+	padding: 30px;
+}
 
 .main {
 	width: 960px;
@@ -1419,54 +1426,51 @@ SUBSCRIBE E-BULLETIN STYLES
 	margin: 0 0 0 30px;
 	width: 640px;
 
-	form {
+	h2{
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 900;
+		color: #386787;
+		text-align: left;
+		margin: 28px 0;
+	}
 
-		h2{
-			text-transform: uppercase;
-			font-size: 18px;
-			font-weight: 900;
-			color: #386787;
-			text-align: left;
-			margin: 28px 0;
+	.input-line {
+		margin: 30px 0;
+
+		#email {
+			height: 32px;
+			width: 230px;
 		}
 
-		.input-line {
-			margin: 30px 0;
-
-			#email {
-				height: 32px;
-				width: 230px;
-			}
-
-			#code {
-				height: 32px;
-				width: 90px;
-			}
-		}
-
-		label {
-			margin: 0 12px 0 0;
-		}
-
-		input {
-			background-color: #587F9A;
-			border: 2px solid #386787;
-			font-family: Tahoma, sans-serif;
-			font-size: 14px;
-			color: #DEE5EB;
-			padding: 3px 10px;
-		}
-
-		.instruct {
-			font-weight: 900;
-		}
-
-		.check-wrap {
-			margin: 20px 6px;
+		#code {
+			height: 32px;
+			width: 90px;
 		}
 	}
 
-	.submit {
+	label {
+		margin: 0 12px 0 0;
+	}
+
+	input {
+		background-color: #587F9A;
+		border: 2px solid #386787;
+		font-family: Tahoma, sans-serif;
+		font-size: 14px;
+		color: #DEE5EB;
+		padding: 3px 10px;
+	}
+
+	.instruct {
+		font-weight: 900;
+	}
+
+	.check-wrap {
+		margin: 20px 6px;
+	}
+
+	#gform_submit_button_1 {
 		font-family: Arial, sans-serif;
 		font-size: 14px;
 		background-color: #A4713B;
@@ -1475,6 +1479,10 @@ SUBSCRIBE E-BULLETIN STYLES
 		text-transform: uppercase;
 		padding: 7px;
 		margin: 0 0 0 5px;
+	}
+
+	#field_2_5 {
+	display: none;
 	}
 }
 

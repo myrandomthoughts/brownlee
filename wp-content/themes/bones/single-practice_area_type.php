@@ -10,14 +10,32 @@
 					<div class="sidebar">
 						<h4>Practice Team</h4>
 						<?php 
-				 
-						$practice_team = get_field('practice_area_relationship'); ?>
+				 		
+				 		$lawyers = get_posts(array(
+							'post_type' => 'biography',
+							'order' => 'ASC',
+							'orderby'   => 'meta_value',
+							'meta_query' => array(
+								array(
+									'key' => 'practice_area_relationship', // name of custom field
+									'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+									'compare' => 'LIKE'
+								)
+							)
+						));
+						
+						?>
 						
 						<ul>
 						<?php 
-						if( $practice_team ): 
-						 	foreach ($practice_team as $k => $pid) {
-						 		print '<li><a href="'. get_page_link($pid) .'">'. get_the_title($pid) .'</a></li>';
+						if( $lawyers ): 
+							$sorted_lawyers = array();
+						 	foreach ($lawyers as $k => $lawyer) {
+						 		$sorted_lawyers[get_the_title($lawyer->ID)] = get_page_link($lawyer->ID);
+						 	}
+						 	ksort($sorted_lawyers);
+						 	foreach ($sorted_lawyers as $name => $url) {
+						 		print '<li><a href="'. $url .'">'. $name .'</a></li>';
 						 	}
 						 
 						 endif; 

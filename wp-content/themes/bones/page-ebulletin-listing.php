@@ -24,11 +24,13 @@ Template Name:Ebulletin listings
 						
 						<?php 
 						$term_id = get_field('ebulletin_reference');
-						
+						$paged = get_query_var('paged');
 						$loop = new WP_Query( array( 
 												'post_type' => 'e-bulletin', 
 												'order' => 'DESC', 
 												'post_status'=>'publish',
+												'paged' => $paged,
+												'posts_per_page' => 5,
 												'tax_query' => array(
 													array(
 														'taxonomy' => 'ebulletin',
@@ -46,7 +48,7 @@ Template Name:Ebulletin listings
 							<a class="full" href="<?php the_permalink(); ?>">Read More...</a>
 						</div>
 
-						<?php endwhile; wp_reset_postdata(); ?>
+						<?php endwhile; wp_pagenavi(array('query' => $loop)); wp_reset_postdata(); ?>
 					</div>
 
 					<a id="top" href="#main">Back to top</a>

@@ -40,11 +40,12 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<!-- <div id="modal-form">
-			<form>
-				
-			</form>
-		</div> -->
+		<div id="modal-form">
+			<div id="modal-wrap">
+				<h2>Email this link to a friend.</h2>
+				<?php gravity_form(2, false, false, false, '', false); ?>
+			</div>
+		</div>
 
 		<div id="container">
 			<header class="header" role="banner">

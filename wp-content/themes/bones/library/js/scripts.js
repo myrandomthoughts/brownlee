@@ -30,6 +30,11 @@ if (!window.getComputedStyle) {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
+	//lawyer search lawyer name
+	$('#lawyer-name-search-select').on('change', function() {
+	  window.location = this.value; // or $(this).val()
+	});
+	//window.location = url;
 	/*
 	Responsive jQuery is a tricky thing.
 	There's a bunch of different ways to handle
@@ -71,14 +76,12 @@ jQuery(document).ready(function($) {
  
 }); /* end of as page load scripts */
 
+//***Modal Functionality***
 
 jQuery( "#email-modal" ).click(function() {
   jQuery( "#modal-form" ).addClass( "modal-on" );
 
-
 });
-
-
 
 /*! A fix for the iOS orientationchange zoom bug.
  Script by @scottjehl, rebound by @wilto.

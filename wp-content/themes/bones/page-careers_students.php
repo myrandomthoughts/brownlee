@@ -13,7 +13,6 @@ Template Name: Careers--Students
 				<div class="side-panel">
 					<?php bones_main_nav(); ?>
 					<?php get_template_part( 'bulletin-news-events-muni' ); ?>
-
 				</div>
 
 			<div class="main-content">
