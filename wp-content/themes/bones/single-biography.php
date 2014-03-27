@@ -74,13 +74,6 @@
 						}
 					}
 				?>
-				<!-- <li><a href="#tab1">Bio</a></li>
-				<li><a href="#tab2">Representative Work</a></li>
-				<li><a href="#tab3">Memberships</a></li>
-				<li><a href="#tab4">Presentations</a></li>
-				<li><a href="#tab5">Publications</a></li>
-				<li><a href="#tab6">Recognition</a></li>
-				 -->
 			</ul>
 		</div>
 

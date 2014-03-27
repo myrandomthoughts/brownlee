@@ -6,19 +6,19 @@
 					<form action="" method="">
 						<div class="input-group">
 							<p>Select a lawyer:</p>
-							<?php wp_reset_query();
+							<?php wp_reset_postdata();
 								$args = array( 	'post_type' => 'biography',
 													'order' 	=> 'ASC',
 												   	'orderby'   => 'meta_value', 
 												   	'meta_key' 	=> 'name'
 												);
 									$lawyers = new WP_Query($args);
-
+									
 									?>
 							<select class="search-input" id="lawyer-name-search-select" name="lawyer">
-								
+								<option value="name">Name</option>
 								<?php
-								foreach ($lawyers as $key => $lawyer) {
+								foreach ($lawyers->posts as $key => $lawyer) {
 										print '<option value="'.get_page_link($lawyer->ID).'">'.get_the_title($lawyer->ID).'</option>';
 									}
 								?>
@@ -29,35 +29,32 @@
 						<span>or</span>
 						<div class="input-group">
 						<p>Name:</p>
-							<input class="search-input no-arrow" type="text" name="">
-							</input>
+							<input class="search-input no-arrow" id="lawyer-name-search-text" type="text" />
+							
 						</div>
 
 						<div class="input-group">
 							<p>Location:</p>
-							<select class="search-input" name="location">
+							<select class="search-input" id="lawyer-location-search-select" name="location">
 								<option value="">All</option>
-								<?php 
-									$loop = new WP_Query( array( 'post_type' => 'practice_area_type', 'order' => 'ASC', 'orderby' => 'title') );
-									foreach ($loop as $key => $pa) {
-										print '<option value="'. $pa->ID .'">'.get_the_title($pa->ID).'</option>';
-									}
-								?>
+								<option value="calgary">Calgary</option>
+								<option value="edmonton">Edmonton</option>
 							</select>
 						</div>
 
 						<div class="input-group">
 							<p>Practice:</p>
-							<select class="search-input" name="practice">
+							<select class="search-input" id="lawyer-pa-search-select" name="practice">
 								<option value="">All</option>
 								<?php 
+								wp_reset_postdata();
 									$loop = new WP_Query( array( 'post_type' => 'practice_area_type', 'order' => 'ASC', 'orderby' => 'title') );
-									foreach ($loop as $key => $pa) {
+									foreach ($loop->posts as $key => $pa) {
 										print '<option value="'. $pa->ID .'">'.get_the_title($pa->ID).'</option>';
 									}
 								?>
 							</select>
-							<input class="search-button" type="submit" value="Go">
+							<input class="search-button" id="lawyer-search-submit" type="submit" value="Go">
 						</div>			
 
 					</form>

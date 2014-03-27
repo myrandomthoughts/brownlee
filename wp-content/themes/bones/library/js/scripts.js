@@ -32,9 +32,21 @@ jQuery(document).ready(function($) {
 
 	//lawyer search lawyer name
 	$('#lawyer-name-search-select').on('change', function() {
-	  window.location = this.value; // or $(this).val()
+		if(this.value !='name'){	
+		  	window.location = this.value; // or $(this).val()
+		}  	
+	});
+
+	$('#lawyer-search-submit').on('click', function(e) {
+		e.preventDefault();
+		var lname = $('#lawyer-name-search-text').val();
+		var location = $('#lawyer-location-search-select').val();
+		var pa = $('#lawyer-pa-search-select').val();
+		var loc = document.location.origin + '/search-results?lawyer='+ lname +'&location='+ location +'&pa='+pa;
+		window.location = loc
 	});
 	//window.location = url;
+	
 	/*
 	Responsive jQuery is a tricky thing.
 	There's a bunch of different ways to handle
