@@ -2,7 +2,33 @@
 
 <div class="main">
 	
-	<?php get_template_part( 'part-main-banner-single' ); ?>
+	<div class="main-banner">
+
+		<img class="banner-shadow-other" src="<?php bloginfo('template_directory'); ?>/library/images/banner-shadow.png" alt="" width="936" height="" />
+
+		<?php 
+ 
+		$city = get_field('location');
+	 	
+		if( $city == "Edmonton" ): ?>
+
+			<img class="top-image top-image-lawyer" src="<?php bloginfo('template_directory'); ?>/library/images/edmonton-banner.png" alt="" width="" height="" />
+	 	
+	 	<?php else: ?>
+
+	 		<img class="top-image top-image-lawyer" src="<?php bloginfo('template_directory'); ?>/library/images/calgary-banner.png" alt="" width="" height="" />
+
+		<?php endif; ?>
+
+		<div class="title">
+			<h1><?php the_title(); ?></h1>
+		</div>
+
+		<img class="title-bg" src="<?php bloginfo('template_directory'); ?>/library/images/title-bg.png" alt="" width="" height="" />
+
+		<?php get_template_part( 'part-side-module' ); ?>
+		
+	</div><!--end of main banner-->
 
 	<div class="side-panel">
 		<?php bones_main_nav(); ?>
@@ -44,7 +70,10 @@
 
 			<?php endif; ?>
 
-			<a href="<?php home_url(); the_field('vcard'); ?>"><div class="vcard"></div></a>
+			<?php
+			$url = home_url();
+			?>
+			<a href="<?php print $url; print "/vcards/"; the_field('vcard'); ?>"><div class="vcard"></div></a>
 
 			<dl>
 				<dt>Location:</dt><dd><?php the_field('location'); ?></dd>
@@ -96,8 +125,6 @@
 	?>
 		
 </div>
-
-		<input class="profile-button" type="button" name="viewall" value="View All">
 	</div>
 </div><!--end of Main-->
 

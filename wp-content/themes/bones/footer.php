@@ -129,7 +129,12 @@
 				</div><!--end of sitemap-->
 
 			</footer>
-
+			<div id="modal-form">
+				<div id="modal-wrap">
+					<h2>Email this link to a friend.</h2>
+					<?php gravity_form(2, false, false, false, '', false); ?>
+				</div>
+			</div>
 		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>

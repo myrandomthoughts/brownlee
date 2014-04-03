@@ -88,13 +88,6 @@ jQuery(document).ready(function($) {
  
 }); /* end of as page load scripts */
 
-//***Modal Functionality***
-
-jQuery( "#email-modal" ).click(function() {
-  jQuery( "#modal-form" ).addClass( "modal-on" );
-
-});
-
 /*! A fix for the iOS orientationchange zoom bug.
  Script by @scottjehl, rebound by @wilto.
  MIT License.
@@ -130,6 +123,7 @@ jQuery( "#email-modal" ).click(function() {
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
 
+// Front Page Slider
 
 jQuery(document).ready(function(){
   jQuery('.slider1').bxSlider({
@@ -137,7 +131,8 @@ jQuery(document).ready(function(){
     slideWidth: 936,
     minSlides: 1,
     maxSlides: 1,
-    slideMargin: 0
+    slideMargin: 0,
+  	controls: false
   });
 });
 
@@ -164,6 +159,9 @@ jQuery(document).ready(function() {
  
 });
 
+// Modal
 
-
-
+function overlay() {
+	el = document.getElementById("modal-form");
+	el.style.display = (el.style.display == "block") ? "none" : "block";
+}

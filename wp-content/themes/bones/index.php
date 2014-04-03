@@ -49,38 +49,35 @@ Template Name: Front Page
 	<div class="homepage">
 		<div class="locations">
 
-			<div class="office office-ed">
-				<h3>Edmonton</h3>
-		
-					 <div class="flyout flyout-left">
+			<div class="office office-ed">		
+				 <div class="flyout flyout-left">
 
-					 	<div class="flyout-wrap">
-					 		<div class="flyout-arrow"></div>
-							<h2>Edmonton</h2>
-							<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
-							<p>
-									<?php the_field('edmonton_address'); ?>
-									<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
-								<a href="">View Full Contact Details</a><br>
-							</p>
+				 	<div class="flyout-wrap">
+
+				 		<div class="flyout-arrow"></div>
+						<h2>Edmonton</h2>
+								<?php the_field('edmonton_address'); ?>
+								<a href="mailto:<?php the_field('edmonton_email'); ?>"><?php the_field('edmonton_email'); ?></a><br>
+							
 					</div>
+					<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
+					<a href="" class="full-contact">View Full Contact Details</a><br>
 				</div>
 			</div><!--end of Edmonton Office-->	
 			
 			<div class="office office-cal">
-				<h3>Calgary</h3>
 
 			<div class="flyout flyout-right">
 				 <div class="flyout-wrap">
 				 	<div class="flyout-arrow"></div>
 					<h2>Calgary</h2>
-					<a id="map" href="<?php print get_page_link(641); ?>">Map</a>
-					<p>
+
 						<?php the_field('calgary_address'); ?>
-						<a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a><br>
-						<a href="">View Full Contact Details</a><br>
-					</p>
-			</div>
+						<a href="mailto:<?php the_field('calgary_email'); ?>"><?php the_field('calgary_email'); ?></a>
+
+				</div>
+					<a id="map" href="<?php print get_page_link(641); ?>">Map</a>
+					<a href="" class="full-contact">View Full Contact Details</a><br>
 			</div> <!--end of Calgary Office-->
 		</div><!--end of locations-->
 		</div>
