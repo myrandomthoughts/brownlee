@@ -61,7 +61,7 @@ Template Name: Front Page
 							
 					</div>
 					<a id="map" href="<?php print get_page_link(638); ?>">Map</a>
-					<a href="" class="full-contact">View Full Contact Details</a><br>
+					<a href="<?php print get_page_link(119); ?>" class="full-contact">View Full Contact Details</a><br>
 				</div>
 			</div><!--end of Edmonton Office-->	
 			
@@ -77,7 +77,7 @@ Template Name: Front Page
 
 				</div>
 					<a id="map" href="<?php print get_page_link(641); ?>">Map</a>
-					<a href="" class="full-contact">View Full Contact Details</a><br>
+					<a href="<?php print get_page_link(119); ?>" class="full-contact">View Full Contact Details</a><br>
 			</div> <!--end of Calgary Office-->
 		</div><!--end of locations-->
 		</div>
