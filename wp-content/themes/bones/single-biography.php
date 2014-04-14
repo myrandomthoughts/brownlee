@@ -106,25 +106,28 @@
 			</ul>
 		</div>
 
-<div id="tabContainer">
-	<?php
+		<div id="tabContainer">
+			<?php
+				
+				$tabnum = 1;
+				$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations', 'Publications'=>'publications', 'Recognition'=>'recognition', 'Community'=>'community');
+				foreach ($tab_filed_names as $key => $value) {
+					$tabcont = get_field($value);
+					
+					if(!empty($tabcont)){
+						print 	'<div id="tab'. $tabnum .'" class="tabContent">
+									<h1>'. $key .'</h1>
+									'. $tabcont .'
+								</div>';
+						$tabnum++;
+					}
+				}
+			?>
+				
+		</div>
+
+		<a class="full" id="showall">View All</a>
 		
-		$tabnum = 1;
-		$tab_filed_names = array( 'Bio' => 'bio', 'Representative Work'=>'representative_work', 'Memberships'=>'memberships', 'Presentations'=>'presentations', 'Publications'=>'publications', 'Recognition'=>'recognition', 'Community'=>'community');
-		foreach ($tab_filed_names as $key => $value) {
-			$tabcont = get_field($value);
-			
-			if(!empty($tabcont)){
-				print 	'<div id="tab'. $tabnum .'" class="tabContent">
-							<h1>'. $key .'</h1>
-							'. $tabcont .'
-						</div>';
-				$tabnum++;
-			}
-		}
-	?>
-		
-</div>
 	</div>
 </div><!--end of Main-->
 

@@ -2373,6 +2373,24 @@ LAWYER PROFILE STYLES
 		padding: 6px 7px;
 		margin: 20px 0 0 0;
 	}
+
+	.full {
+		display: inline-block;
+		font-family: Arial, sans-serif;
+		text-align: center;
+		width: 80px;
+		padding: 2px;
+		color: #fff;
+		background: #A4713B;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 2px 6px;
+	}
+
+		.full:hover {
+			cursor: pointer;
+			color: #0B3768;
+	}
 }
 
 /*********************

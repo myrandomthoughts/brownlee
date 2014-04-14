@@ -136,6 +136,7 @@ jQuery(document).ready(function(){
   });
 });
 
+//Lawyer Bios
 
 jQuery(document).ready(function() {
     //hiding tab content except first one
@@ -157,7 +158,13 @@ jQuery(document).ready(function() {
         return false;
     });
  
+     // Click event on View All
+    jQuery("#showall").click(function() {
+    	jQuery(".tabContent").css({display: "block"});
+    });
+
 });
+
 
 // Modal
 
