@@ -161,8 +161,12 @@ jQuery(document).ready(function() {
      // Click event on View All
     jQuery("#showall").click(function() {
     	jQuery(".tabContent").css({display: "block"});
+    	jQuery(this).hide();
     });
 
+    jQuery("ul.tabs li").click(function() {
+    	jQuery("#showall").show();
+    });
 });
 
 

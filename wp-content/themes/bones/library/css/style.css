@@ -2295,8 +2295,7 @@ LAWYER PROFILE STYLES
     text-transform: uppercase;
     margin: 2px 6px; }
   .profile-wrap .full:hover {
-    cursor: pointer;
-    color: #0B3768; }
+    cursor: pointer; }
 
 /*********************
 LAWYER MAIN STYLES
